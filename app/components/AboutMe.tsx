@@ -18,7 +18,7 @@ const AboutMe = () => {
                 Front-End Developer
               </h2>
             </div>
-            <span className="text-center md:text-left md:leading-7 md:text-lg">
+            <span className="text-center md:text-left md:leading-7 md:text-lg text-slate-700">
               From the Republic Democratic of Congo. I can help you build a
               product, feature or website Look through some of my work and
               experience! If you like what you see and have a project you need
@@ -29,7 +29,7 @@ const AboutMe = () => {
           <div className="flex justify-center gap-2 md:justify-start">
             <button
               type="button"
-              className="btn bg-blue-950 text-white p-3 w-40 rounded-lg hover:text-blue-950 hover:bg-gray-50 shadow-xl"
+              className="btn bg-rose-600 text-white p-3 w-40 rounded-lg hover:text-blue-950 hover:bg-gray-50 shadow-xl"
             >
               Hire Me
             </button>
