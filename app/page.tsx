@@ -1,6 +1,7 @@
-import AboutMe from './components/AboutMe';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
+import AboutMe from "./components/AboutMe";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import Touch from "./components/Touch";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <AboutMe />
         <Experience />
         <Skills />
+        <Touch />
       </div>
     </>
   );

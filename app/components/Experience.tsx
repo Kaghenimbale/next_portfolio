@@ -1,9 +1,9 @@
-import React from 'react';
-import { RiDownload2Fill } from 'react-icons/ri';
+import React from "react";
+import { RiDownload2Fill } from "react-icons/ri";
 
 const Experience = () => {
   return (
-    <div className="p-3 sm:px-2 md:px-20 xl:px-40 2xl:px-60 grid gap-10 grid-cols-1 md:grid-cols-2">
+    <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-60 grid gap-10 grid-cols-1 md:grid-cols-2">
       <div className="flex items-center justify-center lg:justify-start">
         <div className="w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-rose-600"></div>
       </div>
@@ -13,7 +13,7 @@ const Experience = () => {
           2 Year&apos;s Experience on Product
           <span className="text-rose-600"> Design</span>.
         </p>
-        <p>
+        <p className="flex text-slate-700">
           Hey, my name is chris. I am a Front End Developer from the Republic
           Democratic Of Congo. I have been learning web development at
           Microverse, and Online school for web development and I have been
