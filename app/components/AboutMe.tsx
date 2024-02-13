@@ -1,20 +1,20 @@
-import React from 'react';
-import Image from 'next/image';
-import chris from '../../public/chris.jpg';
-import { RiDownload2Fill } from 'react-icons/ri';
+import React from "react";
+import Image from "next/image";
+import chris from "../../public/chris.jpg";
+import { RiDownload2Fill } from "react-icons/ri";
 
 const AboutMe = () => {
   return (
     <>
-      <div className="w-screen page p-3 grid grid-cols-1 items-center pt-8 md:gap-10 sm:px-2 md:px-20 xl:px-40 2xl:px-60 md:grid-cols-2">
+      <div className="w-screen page p-4 grid grid-cols-1 items-center pt-8 md:gap-10 sm:px-2 md:px-20 xl:px-40 2xl:px-60 md:grid-cols-2">
         <div className="flex flex-col md:gap-4 order-2 md:order-none">
           <div className="flex flex-col gap-2">
             <div className="grid md:gap-3">
-              <h1 className="text-2xl text-center md:text-left font-extrabold md:text-4xl lg:text-5xl md:whitespace-nowrap">
+              <h1 className="text-3xl text-center md:text-left font-extrabold md:text-4xl lg:text-5xl md:whitespace-nowrap">
                 Hi I&apos;m KAGHENI
                 <span className="text-rose-600"> Chris</span>
               </h1>
-              <h2 className="font-bold text-center md:text-left md:text-3xl lg:text-4xl">
+              <h2 className="font-bold text-center text-xl md:text-left md:text-3xl lg:text-4xl">
                 Front-End Developer
               </h2>
             </div>
