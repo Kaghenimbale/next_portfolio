@@ -8,7 +8,7 @@ const Experience = () => {
         <div className="w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-rose-600"></div>
       </div>
       <div className="flex flex-col gap-5">
-        <h2 className="font-semibold text-xl">About Chris</h2>
+        <h2 className="font-semibold text-2xl">About Chris</h2>
         <p className="gap text-2xl font-bold">
           2 Year&apos;s Experience on Product
           <span className="text-rose-600"> Design</span>.
