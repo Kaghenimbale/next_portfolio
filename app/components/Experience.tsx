@@ -13,7 +13,7 @@ const Experience = () => {
           2 Year&apos;s Experience on Product
           <span className="text-rose-600"> Design</span>.
         </p>
-        <p className="flex text-slate-700">
+        <p className="text-slate-700">
           Hey, my name is chris. I am a Front End Developer from the Republic
           Democratic Of Congo. I have been learning web development at
           Microverse, and Online school for web development and I have been
@@ -24,7 +24,7 @@ const Experience = () => {
         <div className="flex gap-2">
           <button
             type="button"
-            className="p-3 btn bg-rose-500 text-white rounded-lg shadow-lg shadow-slate-400"
+            className="p-3 btn bg-rose-600 text-white rounded-lg shadow-lg shadow-slate-400"
           >
             Main skills
           </button>
