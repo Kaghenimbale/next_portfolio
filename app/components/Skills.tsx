@@ -15,7 +15,7 @@ const Skills = () => {
       </p>
 
       <div className="grid gap-5 justify-between justify-items-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-        <div className="bg-slate-50 flex flex-col gap-6 w-[16rem] px-4 py-14 rounded-xl shadow-slate-400 shadow">
+        <div className="bg-slate-50 flex flex-col gap-6 w-[16rem] px-4 py-14 rounded-xl shadow-slate-300 shadow-xl">
           <div className="bg-slate-100 shadow-inner shadow-slate-300 w-fit p-3 rounded-lg">
             <BiNetworkChart className="text-4xl text-slate-400" />
           </div>
@@ -33,7 +33,7 @@ const Skills = () => {
           </button>
         </div>
 
-        <div className="bg-slate-50 flex flex-col gap-6 w-[16rem] px-4 py-14 rounded-xl shadow-slate-400 shadow">
+        <div className="bg-slate-50 flex flex-col gap-6 w-[16rem] px-4 py-14 rounded-xl shadow-slate-300 shadow-xl">
           <div className="bg-slate-100 shadow-inner shadow-slate-300 w-fit p-3 rounded-lg">
             <BiNetworkChart className="text-4xl text-slate-400" />
           </div>
@@ -51,7 +51,7 @@ const Skills = () => {
           </button>
         </div>
 
-        <div className="bg-slate-50 flex flex-col gap-6 w-[16rem] px-4 py-14 rounded-xl shadow-slate-400 shadow">
+        <div className="bg-slate-50 flex flex-col gap-6 w-[16rem] px-4 py-14 rounded-xl shadow-slate-300 shadow-xl">
           <div className="bg-slate-100 shadow-inner shadow-slate-300 w-fit p-3 rounded-lg">
             <BiNetworkChart className="text-4xl text-slate-400" />
           </div>
@@ -69,7 +69,7 @@ const Skills = () => {
           </button>
         </div>
 
-        <div className="bg-slate-50 flex flex-col gap-6 w-[16rem] px-4 py-14 rounded-xl shadow-slate-400 shadow">
+        <div className="bg-slate-50 flex flex-col gap-6 w-[16rem] px-4 py-14 rounded-xl shadow-slate-300 shadow-xl">
           <div className="bg-slate-100 shadow-inner shadow-slate-300 w-fit p-3 rounded-lg">
             <BiNetworkChart className="text-4xl text-slate-400" />
           </div>
@@ -91,7 +91,7 @@ const Skills = () => {
       <div className="grid justify-items-center">
         <button
           type="button"
-          className="btn shadow shadow-slate-300 rounded-lg w-fit p-3 flex items-center gap-2 font-bold"
+          className="btn shadow-xl shadow-slate-300 rounded-lg w-fit p-3 flex items-center gap-2 font-bold"
         >
           Load More
           <TiPlus />
