@@ -16,8 +16,37 @@ const Testimonial = () => {
         architecto aspernatur.
       </p>
 
-      <div>
-        <div className="flex flex-col gap-5 bg-slate-100 rounded-lg p-4">
+      <div className="grid grid-cols-1 justify-items-center gap-4 lg:grid-cols-2">
+        <div className="flex flex-col gap-5 bg-slate-100 rounded-lg p-4 sm:w-[25rem]">
+          <div className="flex gap-1">
+            <FaStar className="text-yellow-400" />
+            <FaStar className="text-yellow-400" />
+            <FaStar className="text-yellow-400" />
+            <FaStar className="text-yellow-400" />
+            <FaStar className="text-yellow-400" />
+          </div>
+          <p>
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic harum
+            esse itaque minima quia, veniam, quae animi exercitationem mollitia
+            facere amet? Mollitia maxime vel, fugiat iusto soluta aut aliquid
+            ducimus."
+          </p>
+          <div className="flex bg-gradient-to-r from-indigo-100 justify-between rounded-lg relative p-3">
+            <div>
+              <h3 className="font-bold">John Doe</h3>
+              <p className="">CEO / Founder</p>
+            </div>
+            <Image
+              src={picture}
+              width={60}
+              className="absolute right-3 -top-2"
+              height={60}
+              alt="img"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-5 bg-slate-100 rounded-lg p-4 sm:w-[25rem]">
           <div className="flex gap-1">
             <FaStar className="text-yellow-400" />
             <FaStar className="text-yellow-400" />
