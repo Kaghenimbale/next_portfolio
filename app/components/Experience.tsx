@@ -3,13 +3,13 @@ import { RiDownload2Fill } from "react-icons/ri";
 
 const Experience = () => {
   return (
-    <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-60 grid gap-10 grid-cols-1 md:grid-cols-2">
+    <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 grid gap-10 grid-cols-1 md:grid-cols-2">
       <div className="flex items-center justify-center lg:justify-start">
         <div className="w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-rose-600"></div>
       </div>
       <div className="flex flex-col gap-5">
         <h2 className="font-semibold text-2xl">About Chris</h2>
-        <p className="gap text-2xl font-bold">
+        <p className="sm:text-5xl font-bold">
           2 Year&apos;s Experience on Product
           <span className="text-rose-600"> Design</span>.
         </p>
@@ -24,7 +24,7 @@ const Experience = () => {
         <div className="flex gap-2">
           <button
             type="button"
-            className="p-3 btn bg-rose-600 text-white rounded-lg shadow-lg shadow-slate-400"
+            className="p-3 btn bg-gradient-to-r from-blue-900 to-rose-600 text-white rounded-lg shadow-lg shadow-slate-400"
           >
             Main skills
           </button>

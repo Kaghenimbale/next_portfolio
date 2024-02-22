@@ -47,9 +47,9 @@ const Project = () => {
     },
   ];
   return (
-    <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-60 flex items-center flex-col gap-8">
+    <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex items-center flex-col gap-8">
       <p className="text-rose-600 font-bold text-2xl">Porfolio</p>
-      <p className="font-bold text-3xl  sm:text-5xl">My Creative Works</p>
+      <p className="font-bold text-2xl  sm:text-5xl">My Creative Works</p>
       <div>
         <div className="w-fit shadow-xl shadow-slate-300 rounded-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <button

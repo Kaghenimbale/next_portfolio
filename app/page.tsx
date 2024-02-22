@@ -1,4 +1,5 @@
 import AboutMe from "./components/AboutMe";
+import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Project from "./components/Project";
 import Skills from "./components/Skills";
@@ -15,6 +16,7 @@ export default function Home() {
         <Touch />
         <Project />
         <Testimonial />
+        <Contact />
       </div>
     </>
   );
