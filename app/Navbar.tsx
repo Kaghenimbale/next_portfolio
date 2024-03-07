@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="flex bg-slate-50 z-10 fixed top-0 left-0 right-0 justify-between items-center p-3 sm:px-2 md:px-20 xl:px-40 2xl:px-80 shadow-xl">
       <Link href="/" className="flex font-semibold text-xl text-blue-950">
-        CHRIS-MK34
+        CHRIS-<span className="text-rose-600">MK34</span>
       </Link>
       <ul className="hidden md:flex gap-10">
         {navlinks.map((navlink, index) => {
