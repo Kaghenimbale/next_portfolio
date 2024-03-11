@@ -29,7 +29,7 @@ const AboutMe = () => {
           <div className="flex justify-center gap-2 md:justify-start">
             <button
               type="button"
-              className="btn bg-gradient-to-tr from-rose-600 to-blue-800 text-white p-3 w-40 rounded-lg hover:text-blue-950 hover:bg-gray-50 shadow-xl"
+              className="btn bg-rose-600 text-white p-3 w-40 rounded-lg hover:text-blue-950 hover:bg-gray-50 shadow-xl"
             >
               Hire Me
             </button>
