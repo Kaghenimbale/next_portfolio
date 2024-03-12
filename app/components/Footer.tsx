@@ -14,19 +14,19 @@ const Footer = () => {
       </div>
       <div className="flex gap-3">
         <a href="https://www.facebook.com/chriskag.kmc" target="_blank">
-          <FaFacebookF className="text-4xl p-2 w-[40px] h-[40px] border border-slate-950 rounded-full" />
+          <FaFacebookF className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full" />
         </a>
         <a href="https://www.linkedin.com/in/kaghenimbale/" target="_blank">
-          <FaLinkedinIn className="text-4xl p-2 w-[40px] h-[40px] border border-slate-950 rounded-full" />
+          <FaLinkedinIn className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full" />
         </a>
         <a href="https://twitter.com/MbaleKagheni" target="_blank">
-          <FaTwitter className="text-4xl p-2 w-[40px] h-[40px] border border-slate-950 rounded-full" />
+          <FaTwitter className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full" />
         </a>
         <a href="https://github.com/Kaghenimbale" target="_blank">
-          <FaGithub className="text-4xl p-2 w-[40px] h-[40px] border border-slate-950 rounded-full" />
+          <FaGithub className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full" />
         </a>
         <a href="https://www.instagram.com/kagheni_chris/" target="_blank">
-          <FaInstagram className="text-4xl p-2 w-[40px] h-[40px] border border-slate-950 rounded-full" />
+          <FaInstagram className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full" />
         </a>
       </div>
       <div>
