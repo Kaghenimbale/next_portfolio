@@ -6,7 +6,7 @@ import { RiDownload2Fill } from "react-icons/ri";
 const AboutMe = () => {
   return (
     <>
-      <div className="w-screen h-[100vh] p-4 grid grid-cols-1 items-center pt-8 md:gap-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 md:grid-cols-2">
+      <div className="w-screen h-[100vh] p-4 grid grid-cols-1 items-center pt-20 md:pt-0 md:gap-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 md:grid-cols-2">
         <div className="flex flex-col md:gap-4 order-2 md:order-none">
           <div className="flex flex-col gap-2">
             <div className="grid md:gap-3">
