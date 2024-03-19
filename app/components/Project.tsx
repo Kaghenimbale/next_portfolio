@@ -82,7 +82,7 @@ const Project = () => {
                   {project.type}
                 </p>
                 <h3 className="font-bold text-2xl">{project.name}</h3>
-                <p>{project.description}</p>
+                <p className="text-view">{project.description}</p>
                 <button
                   type="button"
                   className="btn shadow shadow-slate-400 rounded-lg w-fit p-3 flex items-center gap-2 font-bold"

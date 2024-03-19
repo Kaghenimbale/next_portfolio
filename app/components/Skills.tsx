@@ -12,19 +12,19 @@ const Skills = () => {
     },
     {
       id: 2,
-      title: "App Development",
+      title: "Web Development",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,sapiente!",
     },
     {
       id: 3,
-      title: "App Development",
+      title: "Networking",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,sapiente!",
     },
     {
       id: 4,
-      title: "App Development",
+      title: "Electricity",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,sapiente!",
     },
@@ -51,7 +51,7 @@ const Skills = () => {
                 <BiNetworkChart className="text-4xl text-slate-400" />
               </div>
               <h3 className="font-bold text-xl">{card.title}</h3>
-              <p className="text-slate-500">{card.description}</p>
+              <p className="text-slate-500 text-view">{card.description}</p>
               <button
                 type="button"
                 className="btn shadow shadow-slate-400 rounded-lg w-fit p-3 flex items-center gap-2 font-bold"
