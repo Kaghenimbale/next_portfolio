@@ -13,7 +13,7 @@ const Experience = () => {
           2 Year&apos;s Experience on Product
           <span className="text-rose-600"> Design</span>.
         </p>
-        <p className="text-slate-700">
+        <p className="text-slate-700 xl:text-lg">
           Hey, my name is chris. I am a Front End Developer from the Republic
           Democratic Of Congo. I have been learning web development at
           Microverse, and Online school for web development and I have been
