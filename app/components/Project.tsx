@@ -75,7 +75,7 @@ const Project = () => {
           return (
             <div
               key={project.id}
-              className="bg-slate-200 p-4 rounded-lg shadow-xl shadow-slate-300 grid gap-4 w-fit sm:grid-cols-2"
+              className="bg-slate-200 p-4 rounded-lg shadow-lg shadow-slate-200 grid gap-4 w-fit sm:grid-cols-2"
             >
               <div className="flex flex-col gap-4 w-[18rem] sm:w-[15rem] xl:w-[13rem] 2xl:w-[15rem]">
                 <p className="p-1 shadow-inner shadow-slate-400 w-fit rounded-md">
