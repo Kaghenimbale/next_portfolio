@@ -571,12 +571,12 @@ video {
 .h-\[40px\] {
   height: 40px;
 }
-.h-full {
-  height: 100%;
-}
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
+}
+.h-full {
+  height: 100%;
 }
 .w-1 {
   width: 0.25rem;
@@ -749,6 +749,10 @@ video {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
 .p-1 {
   padding: 0.25rem;
 }
@@ -901,6 +905,27 @@ video {
 .shadow-slate-400 {
   --tw-shadow-color: #94a3b8;
   --tw-shadow: var(--tw-shadow-colored);
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-\[height\] {
+  transition-property: height;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-700 {
+  transition-duration: 700ms;
+}
+.duration-300 {
+  transition-duration: 300ms;
+}
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 

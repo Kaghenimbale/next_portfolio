@@ -56,7 +56,7 @@ const Skills = () => {
           return (
             <div
               key={card.id}
-              className="bg-slate-50 flex flex-col gap-6 w-[16rem] h-fit px-4 py-14 rounded-xl shadow-slate-300 shadow-lg"
+              className="bg-slate-50 flex flex-col gap-6 w-[16rem] h-fit transition-height duration-700 px-4 py-14 rounded-xl shadow-slate-300 shadow-lg"
             >
               <div className="bg-slate-100 shadow-inner shadow-slate-300 w-fit p-3 rounded-lg">
                 <BiNetworkChart className="text-4xl text-slate-400" />
