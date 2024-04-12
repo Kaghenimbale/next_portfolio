@@ -2,48 +2,80 @@ import Image from "next/image";
 import React from "react";
 import { TiPlus } from "react-icons/ti";
 import projectimg from "../../public/Screenshot from 2023-04-29 13-13-05.png";
+import bookstore from "../../public/Screenshot from 2024-04-11 13-22-17.png";
+import jstodo from "../../public/Screenshot from 2024-04-11 13-25-11.png";
+import reacttodo from "../../public/Screenshot from 2024-04-11 13-23-49.png";
+import festival from "../../public/Screenshot from 2024-04-11 13-25-25.png";
+import livescore from "../../public/Screenshot from 2024-04-11 13-26-28.png";
+import jsportfolio from "../../public/Screenshot from 2024-04-11 13-38-38.png";
 
 const Project = () => {
   const projects = [
     {
       id: 1,
-      name: "The Services Provided for Web Design",
-      type: "Product Design",
+      title: "BookStore",
+      technologies: ["React", "CSS", "CRA"],
+      type: "Web Application",
+      image: bookstore,
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,similique.",
-      image: projectimg,
-      github: "",
-      livedemo: "",
+        'The Bookstore is a website similar to the "Awesome Books" website. It will allows you to display a list of books, add a book and Remove a selected book',
+      source: "https://github.com/Kaghenimbale/bookstore-app.git",
+      liveDemo: "https://visionary-daifuku-3ba202.netlify.app",
     },
     {
       id: 2,
-      name: "The Services Provided for Web Design",
-      type: "Web Design",
+      title: "JS TodoList",
+      technologies: ["Html", "CSS", "JavaScript"],
+      image: jstodo,
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,similique.",
-      image: projectimg,
-      github: "",
-      livedemo: "",
+        "To-do list is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!",
+      type: "Web Application",
+      source: "https://github.com/Kaghenimbale/To-Do-List-app.git",
+      liveDemo: "https://aesthetic-sunburst-db7cb6.netlify.app/",
     },
     {
       id: 3,
-      name: "The Services Provided for Web Design",
-      type: "UI/UX Design",
+      title: "React TodoList",
+      technologies: ["React", "CSS", "Vite"],
+      image: reacttodo,
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,similique.",
-      image: projectimg,
-      github: "",
-      livedemo: "",
+        "To-do-List is a website that will help you to set up a list a task that you want to accomplish.",
+      type: "Web Application",
+      source: "https://github.com/Kaghenimbale/Todo-list-App.git",
+      liveDemo: "https://gleeful-brigadeiros-299542.netlify.app/",
     },
     {
       id: 4,
-      name: "The Services Provided for Web Design",
-      type: "Web Design",
+      title: "Amani Festival",
+      technologies: ["Html", "CSS", "JavaScript"],
+      image: festival,
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,similique.",
-      image: projectimg,
-      github: "",
-      livedemo: "",
+        "Festival_Amani_Website is a project that will allow people to what the festival amani provide in Goma town and the date of the next session of the Amani festival.",
+      type: "Web Application",
+      source: "https://github.com/Kaghenimbale/Capstone-project.git",
+      liveDemo: "https://kaghenimbale.github.io/Capstone-project/",
+    },
+    {
+      id: 5,
+      title: "Javascript Portfolio",
+      technologies: ["Html", "CSS", "JavaScript"],
+      image: jsportfolio,
+      description:
+        "A Portfolio website is a project that can be used to show your achievement to people and allow them to contact you once they are interested in some of your achievements",
+      type: "Web Application",
+      source: "https://github.com/Kaghenimbale/my-portfolio.git",
+      liveDemo: "https://kaghenimbale.github.io/my-portfolio/",
+    },
+    {
+      id: 6,
+      title: "Football LiveScore",
+      technologies: ["React", "CSS", "Redux"],
+      image: livescore,
+      description:
+        "Football Live score is an application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.",
+      type: "Web Application",
+      source: "https://github.com/Kaghenimbale/metrics-webapp.git",
+      liveDemo: "https://mylivescorefoot.netlify.app/",
     },
   ];
   return (
@@ -81,7 +113,7 @@ const Project = () => {
                 <p className="p-1 shadow-inner shadow-slate-400 w-fit rounded-md">
                   {project.type}
                 </p>
-                <h3 className="font-bold text-2xl">{project.name}</h3>
+                <h3 className="font-bold text-2xl">{project.title}</h3>
                 <p className="text-view">{project.description}</p>
                 <button
                   type="button"
@@ -94,7 +126,7 @@ const Project = () => {
               <div className="flex justify-center">
                 <Image
                   src={project.image}
-                  className="object-cover w-[18rem] sm:w-[15rem] rounded-lg"
+                  className="object-fill w-[18rem] sm:w-[15rem] rounded-lg"
                   alt="Project Image"
                 />
               </div>
