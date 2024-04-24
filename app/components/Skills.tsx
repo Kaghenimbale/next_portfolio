@@ -75,7 +75,7 @@ const Skills = () => {
               </p>
               <button
                 type="button"
-                className="btn shadow shadow-slate-400 rounded-lg w-fit p-3 flex items-center gap-2 font-bold"
+                className="btn shadow shadow-slate-400 rounded-lg w-fit p-3 flex items-center gap-2 font-bold hover:bg-blue-950 hover:text-white transition duration-700"
                 onClick={() => handleShowMore(card.id)}
               >
                 {more === card.id ? "Read Less" : "Read More"}
