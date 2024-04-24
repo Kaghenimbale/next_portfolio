@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import { TiPlus } from "react-icons/ti";
@@ -78,6 +80,11 @@ const Project = () => {
       liveDemo: "https://mylivescorefoot.netlify.app/",
     },
   ];
+
+  const handlePopUp = (id: any) => {
+    const project = projects.filter((project) => project.id === id);
+    console.log("click project", project);
+  };
   return (
     <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex items-center flex-col gap-8">
       <p className="text-rose-600 font-bold text-2xl">Porfolio</p>
@@ -117,7 +124,8 @@ const Project = () => {
                 <p className="text-view">{project.description}</p>
                 <button
                   type="button"
-                  className="btn shadow shadow-slate-400 rounded-lg w-fit p-3 flex items-center gap-2 font-bold"
+                  className="btn shadow shadow-slate-400 rounded-lg w-fit p-3 flex items-center gap-2 font-bold hover:bg-blue-950 hover:text-white transition duration-700"
+                  onClick={() => handlePopUp(project.id)}
                 >
                   Explore More
                   <TiPlus />

@@ -87,7 +87,7 @@ const Experience = () => {
         <a
           href="https://docs.google.com/document/d/16AFIBCZNeGRrFIlPfVNeKlcUZlyj3YGPa5n4z3HLVBI/edit?usp=sharing"
           target="_blank"
-          className="btn bg-slate-50 border-blue-950 border-2 text-blue-950 font-bold p-3 w-40 hover:text-white hover:bg-blue-950 shadow-xl flex justify-center items-center gap-2 whitespace-nowrap"
+          className="btn bg-slate-50 border-blue-950 border-2 text-blue-950 font-bold p-3 w-40 hover:text-white hover:bg-blue-950 transition duration-700 shadow-xl flex justify-center items-center gap-2 whitespace-nowrap"
         >
           Download CV
           <RiDownload2Fill className="font-extrabold" />
