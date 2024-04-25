@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { Fragment, useState } from "react";
 import { TiPlus } from "react-icons/ti";
 import projectimg from "../../public/Screenshot from 2023-04-29 13-13-05.png";
 import bookstore from "../../public/Screenshot from 2024-04-11 13-22-17.png";
@@ -10,8 +10,11 @@ import reacttodo from "../../public/Screenshot from 2024-04-11 13-23-49.png";
 import festival from "../../public/Screenshot from 2024-04-11 13-25-25.png";
 import livescore from "../../public/Screenshot from 2024-04-11 13-26-28.png";
 import jsportfolio from "../../public/Screenshot from 2024-04-11 13-38-38.png";
+import Modal from "./Modal";
 
 const Project = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [dataObject, setData] = useState({});
   const projects = [
     {
       id: 1,
@@ -20,7 +23,7 @@ const Project = () => {
       type: "Web Application",
       image: bookstore,
       description:
-        'The Bookstore is a website similar to the "Awesome Books" website. It will allows you to display a list of books, add a book and Remove a selected book',
+        'The Bookstore is a website similar to the "Awesome Books" website. It will allows you to display a list of books, add a book and Remove a selected book.',
       source: "https://github.com/Kaghenimbale/bookstore-app.git",
       liveDemo: "https://visionary-daifuku-3ba202.netlify.app",
     },
@@ -63,7 +66,7 @@ const Project = () => {
       technologies: ["Html", "CSS", "JavaScript"],
       image: jsportfolio,
       description:
-        "A Portfolio website is a project that can be used to show your achievement to people and allow them to contact you once they are interested in some of your achievements",
+        "A Portfolio website is a project that can be used to show your achievement to people and allow them to contact you once they are interested in some of your achievements.",
       type: "Web Application",
       source: "https://github.com/Kaghenimbale/my-portfolio.git",
       liveDemo: "https://kaghenimbale.github.io/my-portfolio/",
@@ -82,67 +85,77 @@ const Project = () => {
   ];
 
   const handlePopUp = (id: any) => {
+    setShowModal(true);
     const project = projects.filter((project) => project.id === id);
-    console.log("click project", project);
+    setData({ ...project });
+
+    document.body.style.overflowY = "hidden";
+
+    console.log(document.body.style.overflowY);
   };
   return (
-    <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex items-center flex-col gap-8">
-      <p className="text-rose-600 font-bold text-2xl">Porfolio</p>
-      <p className="font-bold text-2xl  sm:text-5xl">My Creative Works</p>
-      <div>
-        <div className="w-fit shadow-xl shadow-slate-300 rounded-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          <button
-            type="button"
-            className="btn bg-slate-50 p-4 shadow-xl shadow-slate-300 rounded-lg"
-          >
-            All Works
-          </button>
-          <button type="button" className="btn bg-slate-200 p-4">
-            Web Development
-          </button>
-          <button type="button" className="btn bg-slate-200 p-4">
-            UI/UX Design
-          </button>
-          <button type="button" className="btn bg-slate-200 p-4">
-            Branding Design
-          </button>
+    <Fragment>
+      <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex items-center flex-col gap-8">
+        <p className="text-rose-600 font-bold text-2xl">Porfolio</p>
+        <p className="font-bold text-2xl  sm:text-5xl">My Creative Works</p>
+        <div>
+          <div className="w-fit shadow-xl shadow-slate-300 rounded-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            <button
+              type="button"
+              className="btn bg-slate-50 p-4 shadow-xl shadow-slate-300 rounded-lg"
+            >
+              All Works
+            </button>
+            <button type="button" className="btn bg-slate-200 p-4">
+              Web Development
+            </button>
+            <button type="button" className="btn bg-slate-200 p-4">
+              UI/UX Design
+            </button>
+            <button type="button" className="btn bg-slate-200 p-4">
+              Branding Design
+            </button>
+          </div>
+        </div>
+
+        <div className="grid gap-5 xl:grid-cols-2 xl:gap-10">
+          {projects.map((project) => {
+            return (
+              <div
+                key={project.id}
+                className="bg-slate-200 p-4 rounded-lg shadow-lg shadow-slate-200 grid gap-4 w-fit sm:grid-cols-2"
+              >
+                <div className="flex flex-col gap-4 w-[18rem] sm:w-[15rem] xl:w-[13rem] 2xl:w-[15rem]">
+                  <p className="p-1 shadow-inner shadow-slate-400 w-fit rounded-md">
+                    {project.type}
+                  </p>
+                  <h3 className="font-bold text-2xl">{project.title}</h3>
+                  <p className="text-view">{project.description}</p>
+                  <button
+                    type="button"
+                    className="btn shadow shadow-slate-400 rounded-lg w-fit p-3 flex items-center gap-2 font-bold hover:bg-blue-950 hover:text-white transition duration-700"
+                    onClick={() => handlePopUp(project.id)}
+                  >
+                    Explore More
+                    <TiPlus />
+                  </button>
+                </div>
+                <div className="flex justify-center">
+                  <Image
+                    src={project.image}
+                    className="object-fill w-[18rem] sm:w-[15rem] rounded-lg"
+                    alt="Project Image"
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
-
-      <div className="grid gap-5 xl:grid-cols-2 xl:gap-10">
-        {projects.map((project) => {
-          return (
-            <div
-              key={project.id}
-              className="bg-slate-200 p-4 rounded-lg shadow-lg shadow-slate-200 grid gap-4 w-fit sm:grid-cols-2"
-            >
-              <div className="flex flex-col gap-4 w-[18rem] sm:w-[15rem] xl:w-[13rem] 2xl:w-[15rem]">
-                <p className="p-1 shadow-inner shadow-slate-400 w-fit rounded-md">
-                  {project.type}
-                </p>
-                <h3 className="font-bold text-2xl">{project.title}</h3>
-                <p className="text-view">{project.description}</p>
-                <button
-                  type="button"
-                  className="btn shadow shadow-slate-400 rounded-lg w-fit p-3 flex items-center gap-2 font-bold hover:bg-blue-950 hover:text-white transition duration-700"
-                  onClick={() => handlePopUp(project.id)}
-                >
-                  Explore More
-                  <TiPlus />
-                </button>
-              </div>
-              <div className="flex justify-center">
-                <Image
-                  src={project.image}
-                  className="object-fill w-[18rem] sm:w-[15rem] rounded-lg"
-                  alt="Project Image"
-                />
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+      {showModal ? (
+        <Modal ObjectData={dataObject} onClose={() => setShowModal(false)} />
+      ) : null}
+    </Fragment>
   );
 };
 
