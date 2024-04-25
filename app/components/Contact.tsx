@@ -4,8 +4,13 @@ import { BiMessageDetail } from "react-icons/bi";
 
 const Contact = () => {
   return (
-    <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-4 bg-slate-50">
-      <h2 className="font-bold text-2xl text-rose-600">Contact Me</h2>
+    <div
+      id="contact"
+      className="px-6 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-4 bg-slate-50"
+    >
+      <h2 className="font-bold text-2xl text-rose-600 text-center">
+        Contact Me
+      </h2>
       <div className="flex flex-col md:flex-row justify-between">
         <div className="flex flex-col gap-5 md:w-[30rem] md:p-5">
           <p className="font-bold text-2xl sm:text-5xl">Get In Touch With Me</p>
@@ -62,8 +67,11 @@ const Contact = () => {
         </div>
         <div className="md:w-[30rem] p-5">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-            nisi eos, doloribus nesciunt ipsam fuga!
+            Hey! I'm Kagheni Mbale Chris, a Front End web developer with a flair
+            for crafting engaging digital experiences. With 3 years of coding, I
+            specialize in creating responsive and user-friendly websites that
+            leave a lasting impression. My passion lies in leveraging the latest
+            technologies to bring innovative solutions to life.
           </p>
           <div className="flex flex-col gap-4 p-6 bg-slate-100 rounded-xl shadow-2xl shadow-slate-300">
             <div className="w-fit h-[21rem]">
