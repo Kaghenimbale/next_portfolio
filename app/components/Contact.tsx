@@ -12,7 +12,7 @@ const Contact = () => {
         Contact Me
       </h2>
       <div className="flex flex-col md:flex-row justify-between">
-        <div className="flex flex-col gap-5 md:w-[30rem] md:p-5">
+        <div className="flex flex-col gap-5 md:w-[30rem] md:p-5 justify-between">
           <p className="font-bold text-2xl sm:text-5xl">Get In Touch With Me</p>
           <form className="flex flex-col gap-4 p-6 bg-slate-100 rounded-xl shadow-2xl shadow-slate-300">
             <div className="flex flex-col gap-4 md:flex-row">
@@ -65,7 +65,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
-        <div className="md:w-[30rem] p-5">
+        <div className="md:w-[30rem] p-5 flex flex-col justify-between">
           <p>
             Hey! I'm Kagheni Mbale Chris, a Front End web developer with a flair
             for crafting engaging digital experiences. With 3 years of coding, I

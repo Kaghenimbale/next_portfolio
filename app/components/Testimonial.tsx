@@ -14,7 +14,7 @@ const Testimonial = () => {
       </h3>
       <h2 className="font-bold sm:text-5xl">What&apos;s Our Customer Say</h2>
       <div className="grid grid-cols-1 justify-items-center gap-4 lg:grid-cols-2">
-        <div className="flex flex-col gap-5 bg-slate-100 rounded-lg p-4 sm:w-[25rem] shadow-xl shadow-slate-300">
+        <div className="flex flex-col gap-5 bg-slate-100 rounded-lg p-4 sm:w-[25rem] shadow-xl shadow-slate-300 justify-between">
           <div className="flex flex-col gap-5">
             <div className="flex gap-1">
               <FaStar className="text-yellow-400" />
