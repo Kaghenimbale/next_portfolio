@@ -1,34 +1,45 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { TiPlus } from "react-icons/ti";
+import { TiMinus } from "react-icons/ti";
 import { BiNetworkChart } from "react-icons/bi";
 
 const Skills = () => {
+  const [more, setMore] = useState(null);
   const cards = [
     {
       id: 1,
       title: "App Development",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,sapiente!",
+        "I am really passionate about working on web application since I have done my training at Microverse an online school of global developer where I have work on many project with developer from all over the world.",
     },
     {
       id: 2,
-      title: "App Development",
+      title: "Web Development",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,sapiente!",
+        "I like working on website since I have done my training at Microverse an online school of global developer where I have work on many project with developer from all over the world. I have learn to work with frameworks like React on the front end, Ruby on Rails on the backend",
     },
     {
       id: 3,
-      title: "App Development",
+      title: "Networking",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,sapiente!",
+        "I finish my studies in network and telecommunication in 2021, and I was really happy about my achievment and help me to grow my computer science skills and learn that we can develop our capacity in computer science throught research on the internet.",
     },
     {
       id: 4,
-      title: "App Development",
+      title: "Electricity",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,sapiente!",
+        "My studies in electricity was really interesting because that when I first like to working with my hand and learn to like technologies.",
     },
   ];
+
+  const handleShowMore = (id: any) => {
+    console.log("Clicked id:", id);
+    console.log("Current more state:", more);
+    setMore(id === more ? null : id);
+  };
+
   return (
     <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-5">
       <h2 className="text-center font-bold text-2xl text-rose-500">
@@ -45,19 +56,30 @@ const Skills = () => {
           return (
             <div
               key={card.id}
-              className="bg-slate-50 flex flex-col gap-6 w-[16rem] px-4 py-14 rounded-xl shadow-slate-300 shadow-xl"
+              className="bg-slate-50 flex flex-col gap-6 w-[16rem] h-fit transition-height duration-700 px-4 py-14 rounded-xl shadow-slate-300 shadow-lg"
             >
               <div className="bg-slate-100 shadow-inner shadow-slate-300 w-fit p-3 rounded-lg">
                 <BiNetworkChart className="text-4xl text-slate-400" />
               </div>
               <h3 className="font-bold text-xl">{card.title}</h3>
-              <p className="text-slate-500">{card.description}</p>
+              <p
+                className={
+                  more !== card.id || more === null
+                    ? "text-slate-500 text-view"
+                    : "text-slate-500 text-view-1"
+                }
+              >
+                {more !== card.id || more === null
+                  ? card.description.slice(0, 55)
+                  : card.description}
+              </p>
               <button
                 type="button"
-                className="btn shadow shadow-slate-400 rounded-lg w-fit p-3 flex items-center gap-2 font-bold"
+                className="btn shadow shadow-slate-400 rounded-lg w-fit p-3 flex items-center gap-2 font-bold hover:bg-blue-950 hover:text-white transition duration-700"
+                onClick={() => handleShowMore(card.id)}
               >
-                Read More
-                <TiPlus />
+                {more === card.id ? "Read Less" : "Read More"}
+                {more === card.id ? <TiMinus /> : <TiPlus />}
               </button>
             </div>
           );

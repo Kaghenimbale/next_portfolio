@@ -3,17 +3,17 @@ import { RiDownload2Fill } from "react-icons/ri";
 
 const Experience = () => {
   return (
-    <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 grid gap-10 grid-cols-1 md:grid-cols-2">
+    <div className="px-6 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 grid gap-10 grid-cols-1 md:grid-cols-2">
       <div className="flex items-center justify-center lg:justify-start">
         <div className="w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-rose-600"></div>
       </div>
       <div className="flex flex-col gap-5">
-        <h2 className="font-semibold text-2xl">About Chris</h2>
-        <p className="sm:text-5xl font-bold">
+        <h2 className="font-semibold text-2xl text-center">About Chris</h2>
+        <p className="text-xl sm:text-5xl font-bold">
           2 Year&apos;s Experience on Product
           <span className="text-rose-600"> Design</span>.
         </p>
-        <p className="text-slate-700">
+        <p className="text-slate-700 xl:text-lg">
           Hey, my name is chris. I am a Front End Developer from the Republic
           Democratic Of Congo. I have been learning web development at
           Microverse, and Online school for web development and I have been
@@ -87,7 +87,7 @@ const Experience = () => {
         <a
           href="https://docs.google.com/document/d/16AFIBCZNeGRrFIlPfVNeKlcUZlyj3YGPa5n4z3HLVBI/edit?usp=sharing"
           target="_blank"
-          className="btn bg-slate-50 border-blue-950 border-2 text-blue-950 font-bold p-3 w-40 hover:text-white hover:bg-blue-950 shadow-xl flex justify-center items-center gap-2 whitespace-nowrap"
+          className="btn bg-slate-50 border-blue-950 border-2 text-blue-950 font-bold p-3 w-40 hover:text-white hover:bg-blue-950 transition duration-700 shadow-xl flex justify-center items-center gap-2 whitespace-nowrap"
         >
           Download CV
           <RiDownload2Fill className="font-extrabold" />
