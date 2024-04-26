@@ -1,5 +1,9 @@
 import React from "react";
 import { RiDownload2Fill } from "react-icons/ri";
+import { FaReact } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3 } from "react-icons/fa";
 
 const Experience = () => {
   return (
@@ -48,10 +52,21 @@ const Experience = () => {
                 <div className="w-1 h-1 bg-slate-800 rounded-full"></div>
               </div>
               <div>
-                <p>User Experience Design - UI/UX</p>
-                <p className="flex text-gray-400">
-                  Delight the user and make it work
-                </p>
+                <div>
+                  <p>User Experience Design - UI/UX</p>
+                  <p className="flex text-gray-400">
+                    Delight the user and make it work
+                  </p>
+                </div>
+                <div>
+                  <p>Technologies Used.</p>
+                  <div>
+                    <FaReact />
+                    <IoLogoJavascript />
+                    <FaHtml5 />
+                    <FaCss3 />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
