@@ -1,9 +1,13 @@
 import React from "react";
 import { RiDownload2Fill } from "react-icons/ri";
-import { FaReact } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3 } from "react-icons/fa";
+import react from "../../public/react.png";
+import next from "../../public/next.svg";
+import javascript from "../../public/javascript.png";
+import html from "../../public/html.png";
+import css from "../../public/css.png";
+import ror from "../../public/Ruby_On_Rails.svg.png";
+import tailwind from "../../public/tailwind.png";
+import Image from "next/image";
 
 const Experience = () => {
   return (
@@ -58,13 +62,14 @@ const Experience = () => {
                     Delight the user and make it work
                   </p>
                 </div>
-                <div>
+                <div className="flex flex-col gap-3">
                   <p>Technologies Used.</p>
-                  <div>
-                    <FaReact />
-                    <IoLogoJavascript />
-                    <FaHtml5 />
-                    <FaCss3 />
+                  <div className="flex gap-3">
+                    <Image alt="icons" width={40} src={tailwind} />
+                    <Image alt="icons" width={40} src={javascript} />
+                    <Image alt="icons" width={40} src={react} />
+                    <Image alt="icons" width={40} src={next} />
+                    <Image alt="icons" width={40} src={ror} />
                   </div>
                 </div>
               </div>
