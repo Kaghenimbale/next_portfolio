@@ -95,7 +95,10 @@ const Project = () => {
   };
   return (
     <Fragment>
-      <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex items-center flex-col gap-8">
+      <div
+        id="services"
+        className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex items-center flex-col gap-8"
+      >
         <p className="text-rose-600 font-bold text-2xl">Porfolio</p>
         <p className="font-bold text-2xl  sm:text-5xl">My Creative Works</p>
         <div>

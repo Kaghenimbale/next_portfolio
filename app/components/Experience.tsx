@@ -12,7 +12,10 @@ import Image from "next/image";
 
 const Experience = () => {
   return (
-    <div className="px-6 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 grid gap-10 grid-cols-1 md:grid-cols-2">
+    <div
+      id="about"
+      className="px-6 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 grid gap-10 grid-cols-1 md:grid-cols-2"
+    >
       <div className="flex items-center justify-center lg:justify-start">
         <div className="w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-rose-600"></div>
       </div>
