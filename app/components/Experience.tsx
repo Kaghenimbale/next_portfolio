@@ -1,5 +1,6 @@
 import React from "react";
 import { RiDownload2Fill } from "react-icons/ri";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import react from "../../public/react.png";
 import next from "../../public/next.svg";
 import javascript from "../../public/javascript.png";
@@ -63,13 +64,30 @@ const Experience = () => {
                   </p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <p>Technologies Used.</p>
-                  <div className="flex gap-3">
-                    <Image alt="icons" width={40} src={tailwind} />
-                    <Image alt="icons" width={40} src={javascript} />
-                    <Image alt="icons" width={40} src={react} />
-                    <Image alt="icons" width={40} src={next} />
-                    <Image alt="icons" width={40} src={ror} />
+                  <p className="flex gap-2 items-center font-bold text-rose-600 underline">
+                    Technologies Used.
+                  </p>
+                  <div className="flex gap-3 flex-wrap">
+                    <div className="flex gap-2 items-center">
+                      <IoMdCheckmarkCircleOutline className="text-rose-600" />
+                      <span className="underline">React Js</span>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                      <IoMdCheckmarkCircleOutline className="text-rose-600" />
+                      <span className="underline">Next Js</span>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                      <IoMdCheckmarkCircleOutline className="text-rose-600" />
+                      <span className="underline">Javascript</span>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                      <IoMdCheckmarkCircleOutline className="text-rose-600" />
+                      <span className="underline">Tailwind</span>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                      <IoMdCheckmarkCircleOutline className="text-rose-600" />
+                      <span className="underline">Ruby on Rails</span>
+                    </div>
                   </div>
                 </div>
               </div>
