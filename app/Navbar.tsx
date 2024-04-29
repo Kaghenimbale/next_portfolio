@@ -22,10 +22,12 @@ const Navbar = () => {
           );
         })}
       </ul>
-      <button className="btn flex items-center gap-2 bg-blue-950 p-3 text-white rounded-md hover:bg-gray-50 hover:text-blue-950 hover:shadow">
-        Let&apos;s Chat
-        <AiFillMessage color="white" />
-      </button>
+      <a href="https://www.linkedin.com/in/kaghenimbale/" target="_blank">
+        <button className="btn flex items-center gap-2 bg-blue-950 p-3 text-white rounded-md hover:bg-gray-50 hover:text-blue-950 hover:shadow">
+          Let&apos;s Chat
+          <AiFillMessage color="white" />
+        </button>
+      </a>
     </nav>
   );
 };
