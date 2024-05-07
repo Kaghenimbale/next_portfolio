@@ -8,7 +8,10 @@ import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   const year = new Date();
   return (
-    <div className="bg-slate-100 px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-2 items-center md:flex-row md:justify-between">
+    <div
+      className="bg-slate-100 px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-2 items-center md:flex-row md:justify-between"
+      // data-aos="fade-up"
+    >
       <div className="text-2xl font-bold">
         CHRIS <span className="text-rose-600">MK34</span>
       </div>

@@ -7,6 +7,7 @@ const Contact = () => {
     <div
       id="contact"
       className="px-6 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-4 bg-slate-50"
+      // data-aos="fade-up"
     >
       <h2 className="font-bold text-2xl text-rose-600 text-center">
         Contact Me

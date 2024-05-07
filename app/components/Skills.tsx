@@ -35,8 +35,6 @@ const Skills = () => {
   ];
 
   const handleShowMore = (id: any) => {
-    console.log("Clicked id:", id);
-    console.log("Current more state:", more);
     setMore(id === more ? null : id);
   };
 
@@ -56,7 +54,11 @@ const Skills = () => {
           return (
             <div
               key={card.id}
-              className="bg-slate-50 flex flex-col gap-6 w-[16rem] h-fit transition-height duration-700 px-4 py-14 rounded-xl shadow-slate-300 shadow-lg"
+              className={`bg-slate-50 flex flex-col gap-6 w-[16rem] ${
+                more !== card.id || more === null
+                  ? "h-[20rem] transition-height duration-800"
+                  : "h-auto transition-height duration-700"
+              } px-4 py-8 rounded-xl shadow-slate-300 shadow-lg`}
             >
               <div className="bg-slate-100 shadow-inner shadow-slate-300 w-fit p-3 rounded-lg">
                 <BiNetworkChart className="text-4xl text-slate-400" />
@@ -66,11 +68,11 @@ const Skills = () => {
                 className={
                   more !== card.id || more === null
                     ? "text-slate-500 text-view"
-                    : "text-slate-500 text-view-1"
+                    : "text-slate-500 text-view-1 transition-all duration-500"
                 }
               >
                 {more !== card.id || more === null
-                  ? card.description.slice(0, 55)
+                  ? `${card.description.slice(0, 56)}...`
                   : card.description}
               </p>
               <button

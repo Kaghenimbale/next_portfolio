@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
