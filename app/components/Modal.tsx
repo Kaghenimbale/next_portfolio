@@ -8,7 +8,6 @@ const Modal = ({ ObjectData, onClose }: any) => {
     if (e.target.id === "wrapper") onClose();
     document.body.style.overflowY = "scroll";
   };
-  console.log(ObjectData);
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-25 z-20 backdrop-blur-lg flex justify-center items-center"
@@ -21,7 +20,7 @@ const Modal = ({ ObjectData, onClose }: any) => {
           className="font-bold rounded-md place-self-end"
           onClick={() => onClose()}
         >
-          <IoMdCloseCircle className="text-4xl hover:text-red-700 " />
+          <IoMdCloseCircle className="text-4xl text-white hover:text-red-500 " />
         </button>
         <div className=" bg-white w-[90vw] md:w-[40rem] flex flex-col gap-2 text-black p-3">
           <Image

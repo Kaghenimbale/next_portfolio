@@ -12,13 +12,14 @@ const Touch = () => {
           Have a Project In Your Mind
         </p>
 
-        <button
+        <a
           type="button"
-          className="btn bg-gradient-to-tr from-rose-600 to-blue-800 text-white shadow-xl shadow-slate-300 rounded-lg w-fit p-3 flex items-center gap-2 font-bold"
+          href="#contact"
+          className="btn bg-gradient-to-tr from-rose-600 to-blue-800 text-white shadow-xl shadow-slate-300 rounded-lg w-fit p-3 flex items-center gap-2 font-bold hover:-translate-y-2 duration-300 transition"
         >
           Contact Me
           <TiPlus />
-        </button>
+        </a>
       </div>
     </div>
   );

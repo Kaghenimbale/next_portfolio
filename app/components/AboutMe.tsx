@@ -32,14 +32,14 @@ const AboutMe = () => {
           <div className="flex justify-center gap-2 md:justify-start">
             <button
               type="button"
-              className="btn bg-rose-600 transition duration-700 text-white p-3 w-40 rounded-lg hover:text-blue-950 hover:bg-gray-50 shadow-xl"
+              className="btn bg-rose-600 transition hover:-translate-y-2 duration-700 text-white p-3 w-40 rounded-lg shadow-xl "
             >
               Hire Me
             </button>
             <a
               href="https://docs.google.com/document/d/16AFIBCZNeGRrFIlPfVNeKlcUZlyj3YGPa5n4z3HLVBI/edit?usp=sharing"
               target="_blank"
-              className="btn bg-blue-950 transition duration-700 text-white p-3 w-40 rounded-lg hover:text-blue-950 hover:bg-gray-50 shadow-xl flex justify-center items-center gap-2 whitespace-nowrap"
+              className="btn bg-blue-950 transition hover:-translate-y-2 duration-700 text-white p-3 w-40 rounded-lg shadow-xl flex justify-center items-center gap-2 whitespace-nowrap"
             >
               Download CV
               <RiDownload2Fill className="font-bold" />

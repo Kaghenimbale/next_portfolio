@@ -127,6 +127,7 @@ const Project = () => {
               <div
                 key={project.id}
                 className="bg-slate-200 p-4 rounded-lg shadow-lg shadow-slate-200 grid gap-4 w-fit sm:grid-cols-2"
+                data-aos="fade-up"
               >
                 <div className="flex flex-col gap-4 w-[18rem] sm:w-[15rem] xl:w-[13rem] 2xl:w-[15rem]">
                   <p className="p-1 shadow-inner shadow-slate-400 w-fit rounded-md">
@@ -146,7 +147,7 @@ const Project = () => {
                 <div className="flex justify-center">
                   <Image
                     src={project.image}
-                    className="object-fill w-[18rem] sm:w-[15rem] rounded-lg"
+                    className="object-fill w-[18rem] sm:w-[15rem] rounded-lg hover:duration-700"
                     alt="Project Image"
                   />
                 </div>
