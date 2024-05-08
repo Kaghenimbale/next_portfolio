@@ -67,6 +67,22 @@ const Experience = () => {
                     Delight the user and make it work
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="">
+            <div className="flex gap-3">
+              <div className="w-4 h-4 border-2 border-rose-500 rounded-full flex items-center justify-center">
+                <div className="w-1 h-1 bg-slate-800 rounded-full"></div>
+              </div>
+              <div>
+                <div>
+                  <p>Web & User Interface Design - Development</p>
+                  <p className="flex text-gray-400">
+                    Websites, web experiences, ...
+                  </p>
+                </div>
                 <div className="flex flex-col gap-3">
                   <p className="flex gap-2 items-center font-bold text-rose-600 underline">
                     Technologies Used.
@@ -94,20 +110,6 @@ const Experience = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="">
-            <div className="flex gap-3">
-              <div className="w-4 h-4 border-2 border-rose-500 rounded-full flex items-center justify-center">
-                <div className="w-1 h-1 bg-slate-800 rounded-full"></div>
-              </div>
-              <div>
-                <p>Web & User Interface Design - Development</p>
-                <p className="flex text-gray-400">
-                  Websites, web experiences, ...
-                </p>
               </div>
             </div>
           </div>
