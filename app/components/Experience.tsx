@@ -1,21 +1,12 @@
 import React from "react";
 import { RiDownload2Fill } from "react-icons/ri";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import react from "../../public/react.png";
-import next from "../../public/next.svg";
-import javascript from "../../public/javascript.png";
-import html from "../../public/html.png";
-import css from "../../public/css.png";
-import ror from "../../public/Ruby_On_Rails.svg.png";
-import tailwind from "../../public/tailwind.png";
-import Image from "next/image";
 
 const Experience = () => {
   return (
     <div
       id="about"
       className="px-6 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 grid gap-10 grid-cols-1 md:grid-cols-2"
-      // data-aos="fade-up"
     >
       <div className="flex items-center justify-center lg:justify-start">
         <div className="w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-rose-600"></div>
