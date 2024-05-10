@@ -7,6 +7,7 @@ const Contact = () => {
     <div
       id="contact"
       className="px-6 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-4 bg-slate-50"
+      // data-aos="fade-up"
     >
       <h2 className="font-bold text-2xl text-rose-600 text-center">
         Contact Me
@@ -66,12 +67,10 @@ const Contact = () => {
           </form>
         </div>
         <div className="md:w-[30rem] p-5 flex flex-col justify-between">
+          <h2 className="font-bold text-2xl">Let's talk about it</h2>
           <p>
-            Hey! I'm Kagheni Mbale Chris, a Front End web developer with a flair
-            for crafting engaging digital experiences. With 3 years of coding, I
-            specialize in creating responsive and user-friendly websites that
-            leave a lasting impression. My passion lies in leveraging the latest
-            technologies to bring innovative solutions to life.
+            Question, comment or concern? the contact form is the best way to
+            get in touch with me.
           </p>
           <div className="flex flex-col gap-4 p-6 bg-slate-100 rounded-xl shadow-2xl shadow-slate-300">
             <div className="w-fit h-[21rem]">
