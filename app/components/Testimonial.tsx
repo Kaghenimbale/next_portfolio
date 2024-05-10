@@ -8,7 +8,10 @@ import Image from "next/image";
 
 const Testimonial = () => {
   return (
-    <div className="px-6 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-5">
+    <div
+      className="px-6 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-5"
+      // data-aos="fade-up"
+    >
       <h3 className="font-bold text-rose-500 text-2xl text-center">
         Testimonial
       </h3>
