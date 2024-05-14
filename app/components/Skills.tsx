@@ -5,7 +5,7 @@ import { TiPlus } from "react-icons/ti";
 import { TiMinus } from "react-icons/ti";
 import { BiNetworkChart } from "react-icons/bi";
 
-const Skills = () => {
+const Skills = ({ modeTheme }: any) => {
   const [more, setMore] = useState(null);
   const cards = [
     {
@@ -39,7 +39,11 @@ const Skills = () => {
   };
 
   return (
-    <div className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-5">
+    <div
+      className={`px-3   ${
+        modeTheme === "light" ? "" : "bg-slate-800 text-slate-300"
+      } py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-5`}
+    >
       <h2 className="text-center font-bold text-2xl text-rose-500">
         What We Do
       </h2>
@@ -58,7 +62,11 @@ const Skills = () => {
                 more !== card.id || more === null
                   ? "h-[20rem] transition-height duration-800"
                   : "h-auto transition-height duration-700"
-              } px-4 py-8 rounded-xl shadow-slate-300 shadow-lg`}
+              } px-4 py-8 rounded-xl shadow-lg ${
+                modeTheme === "dark"
+                  ? "text-blue-950 shadow-slate-700"
+                  : "shadow-slate-400"
+              }`}
             >
               <div className="bg-slate-100 shadow-inner shadow-slate-300 w-fit p-3 rounded-lg">
                 <BiNetworkChart className="text-4xl text-slate-400" />
@@ -91,7 +99,9 @@ const Skills = () => {
       <div className="grid justify-items-center">
         <button
           type="button"
-          className="btn shadow-xl shadow-slate-300 rounded-lg w-fit p-3 flex items-center gap-2 font-bold"
+          className={`btn shadow-xl rounded-lg w-fit p-3 flex items-center gap-2 font-bold  ${
+            modeTheme === "dark" ? "shadow-slate-700" : "shadow-slate-400"
+          }`}
         >
           Load More
           <TiPlus />

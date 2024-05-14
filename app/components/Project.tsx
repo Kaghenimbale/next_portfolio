@@ -12,7 +12,7 @@ import livescore from "../../public/Screenshot from 2024-04-11 13-26-28.png";
 import jsportfolio from "../../public/Screenshot from 2024-04-11 13-38-38.png";
 import Modal from "./Modal";
 
-const Project = () => {
+const Project = ({ modeTheme }: any) => {
   const [showModal, setShowModal] = useState(false);
   const [dataObject, setData] = useState({});
   const projects = [
@@ -97,15 +97,27 @@ const Project = () => {
     <Fragment>
       <div
         id="services"
-        className="px-3 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex items-center flex-col gap-8"
+        className={`px-3  ${
+          modeTheme === "light" ? "" : "bg-slate-800 text-slate-300"
+        } py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex items-center flex-col gap-8`}
       >
         <p className="text-rose-600 font-bold text-2xl">Porfolio</p>
         <p className="font-bold text-2xl  sm:text-5xl">My Creative Works</p>
-        <div>
-          <div className="w-fit shadow-xl shadow-slate-300 rounded-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div className={`${modeTheme === "dark" ? "text-blue-950" : ""}`}>
+          <div
+            className={`w-fit shadow-xl ${
+              modeTheme === "dark"
+                ? "shadow-slate-700 text-blue-950"
+                : "shadow-slate-400"
+            } rounded-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`}
+          >
             <button
               type="button"
-              className="btn bg-slate-50 p-4 shadow-xl shadow-slate-300 rounded-lg"
+              className={`btn bg-slate-50 p-4 shadow-xl rounded-lg ${
+                modeTheme === "dark"
+                  ? "shadow-slate-700 text-blue-950"
+                  : "shadow-slate-400"
+              }`}
             >
               All Works
             </button>
@@ -126,7 +138,11 @@ const Project = () => {
             return (
               <div
                 key={project.id}
-                className="bg-slate-200 p-4 rounded-lg shadow-lg shadow-slate-200 grid gap-4 w-fit sm:grid-cols-2"
+                className={`bg-slate-200 p-4 rounded-lg shadow-lg grid gap-4 w-fit sm:grid-cols-2 ${
+                  modeTheme === "dark"
+                    ? "text-black shadow-slate-700"
+                    : "shadow-slate-400"
+                }`}
                 data-aos="fade-up"
               >
                 <div className="flex flex-col gap-4 w-[18rem] sm:w-[15rem] xl:w-[13rem] 2xl:w-[15rem]">
