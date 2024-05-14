@@ -3,7 +3,7 @@ import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoMdCloseCircle } from "react-icons/io";
 
-const Modal = ({ ObjectData, onClose }: any) => {
+const Modal = ({ ObjectData, onClose, modeTheme }: any) => {
   const handleClick = (e: any) => {
     if (e.target.id === "wrapper") onClose();
     document.body.style.overflowY = "scroll";

@@ -6,18 +6,23 @@ import hiro from "../../public/75126481.jpeg";
 import nahom from "../../public/1700411122429.jpeg";
 import Image from "next/image";
 
-const Testimonial = () => {
+const Testimonial = ({ modeTheme }: any) => {
   return (
     <div
-      className="px-6 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-5"
-      // data-aos="fade-up"
+      className={`px-6    ${
+        modeTheme === "light" ? "" : "bg-slate-800 text-slate-300"
+      } py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-5`}
     >
       <h3 className="font-bold text-rose-500 text-2xl text-center">
         Testimonial
       </h3>
       <h2 className="font-bold sm:text-5xl">What&apos;s Our Customer Say</h2>
       <div className="grid grid-cols-1 justify-items-center gap-4 lg:grid-cols-2">
-        <div className="flex flex-col gap-5 bg-slate-100 rounded-lg p-4 sm:w-[25rem] shadow-xl shadow-slate-300 justify-between">
+        <div
+          className={`flex flex-col gap-5 bg-slate-100 rounded-lg p-4 sm:w-[25rem] shadow-xl  ${
+            modeTheme === "dark" ? "shadow-slate-700" : "shadow-slate-400"
+          } justify-between`}
+        >
           <div className="flex flex-col gap-5">
             <div className="flex gap-1">
               <FaStar className="text-yellow-400" />
@@ -26,7 +31,7 @@ const Testimonial = () => {
               <FaStar className="text-yellow-400" />
               <FaStar className="text-yellow-400" />
             </div>
-            <p>
+            <p className={`${modeTheme === "dark" ? "text-blue-950" : ""}`}>
               "Kagheni(Chris) is a great developer and a friend. He is a very
               smart, friendly, and hard worker with good communication skills.
               He is also a good collaborator and team player with both technical
@@ -37,7 +42,7 @@ const Testimonial = () => {
             </p>
           </div>
           <div className="flex bg-gradient-to-r from-indigo-200 justify-between relative rounded-lg p-3">
-            <div>
+            <div className={`${modeTheme === "dark" ? "text-blue-950" : ""}`}>
               <h3 className="font-bold">Nahom zerihun</h3>
               <p className="">Web Developer</p>
             </div>
@@ -51,7 +56,11 @@ const Testimonial = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5 bg-slate-100 rounded-lg p-4 sm:w-[25rem] shadow-xl shadow-slate-300 justify-between">
+        <div
+          className={`flex flex-col gap-5 bg-slate-100 rounded-lg p-4 sm:w-[25rem] shadow-xl   ${
+            modeTheme === "dark" ? "shadow-slate-700" : "shadow-slate-400"
+          } justify-between`}
+        >
           <div className="flex flex-col gap-5">
             <div className="flex gap-1">
               <FaStar className="text-yellow-400" />
@@ -59,7 +68,7 @@ const Testimonial = () => {
               <FaStar className="text-yellow-400" />
               <FaStar className="text-yellow-400" />
             </div>
-            <p>
+            <p className={`${modeTheme === "dark" ? "text-blue-950" : ""}`}>
               "Chris is a Good guy. We spent one week together at Microverse an
               online school of global developers and that was one of the
               greatest weeks that I spent with my coding partner at Microverse.
@@ -69,7 +78,7 @@ const Testimonial = () => {
             </p>
           </div>
           <div className="flex bg-gradient-to-r from-indigo-200 justify-between rounded-lg relative p-3">
-            <div>
+            <div className={`${modeTheme === "dark" ? "text-blue-950" : ""}`}>
               <h3 className="font-bold">Hiro Mataba</h3>
               <p className="">Front End Developer</p>
             </div>
