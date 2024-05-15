@@ -100,7 +100,9 @@ const Skills = ({ modeTheme }: any) => {
         <button
           type="button"
           className={`btn shadow-xl rounded-lg w-fit p-3 flex items-center gap-2 font-bold  ${
-            modeTheme === "dark" ? "shadow-slate-700" : "shadow-slate-400"
+            modeTheme === "dark"
+              ? "bg-slate-50 text-blue-950 shadow-slate-900"
+              : "shadow-slate-400"
           }`}
         >
           Load More
