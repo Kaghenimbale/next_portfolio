@@ -3,12 +3,14 @@ import Image from "next/image";
 import chris from "../../public/chris.jpg";
 import { RiDownload2Fill } from "react-icons/ri";
 
-const AboutMe = () => {
+const AboutMe = ({ modeTheme }: any) => {
   return (
     <>
       <div
         id="home"
-        className="w-screen h-[100vh] p-6 grid grid-cols-1 items-center pt-20 md:pt-0 md:gap-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 md:grid-cols-2"
+        className={`w-screen ${
+          modeTheme === "light" ? "" : "bg-slate-800 text-white"
+        } h-[100vh] p-6 grid grid-cols-1 items-center pt-20 md:pt-0 md:gap-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 md:grid-cols-2`}
       >
         <div className="flex flex-col md:gap-4 order-2 md:order-none">
           <div className="flex flex-col gap-2">
@@ -21,7 +23,11 @@ const AboutMe = () => {
                 Front-End Developer
               </h2>
             </div>
-            <span className="text-center md:text-left md:leading-7 md:text-lg text-slate-700">
+            <span
+              className={`text-center md:text-left md:leading-7 md:text-lg ${
+                modeTheme === "dark" ? " text-slate-300" : "text-slate-700"
+              }`}
+            >
               From the Republic Democratic of Congo. I can help you build a
               product, feature or website Look through some of my work and
               experience! If you like what you see and have a project you need

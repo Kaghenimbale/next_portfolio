@@ -2,9 +2,13 @@ import React from "react";
 import { RiDownload2Fill } from "react-icons/ri";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
-const Experience = () => {
+const Experience = ({ modeTheme }: any) => {
   return (
-    <div className="px-6 py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-4">
+    <div
+      className={`px-6 ${
+        modeTheme === "light" ? "" : "bg-slate-800 text-slate-300"
+      } py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-4`}
+    >
       <h2 className="font-semibold text-2xl text-center text-rose-600">
         About Chris
       </h2>
@@ -17,7 +21,12 @@ const Experience = () => {
             2 Year&apos;s Experience on Product
             <span className="text-rose-600"> Design</span>.
           </p>
-          <p className="text-slate-700 xl:text-lg">
+
+          <p
+            className={` xl:text-lg ${
+              modeTheme === "dark" ? " text-slate-300" : "text-slate-700"
+            }`}
+          >
             Hey, my name is chris. I am a Front End Developer from the Republic
             Democratic Of Congo. I have been learning web development at
             Microverse, and Online school for web development and I have been
@@ -28,19 +37,31 @@ const Experience = () => {
           <div className="flex gap-2">
             <button
               type="button"
-              className="p-3 btn bg-gradient-to-r from-blue-900 to-rose-600 text-white rounded-lg shadow-lg shadow-slate-400"
+              className={`p-3 btn bg-gradient-to-r from-blue-900 to-rose-600 text-white rounded-lg shadow-lg  ${
+                modeTheme === "dark"
+                  ? "shadow-slate-700 text-blue-950"
+                  : "shadow-slate-400"
+              }`}
             >
               Main skills
             </button>
             <button
               type="button"
-              className="p-3 btn bg-slate-100 shadow-lg shadow-slate-400 rounded-lg"
+              className={`p-3 btn bg-slate-100 shadow-lg ${
+                modeTheme === "dark"
+                  ? "shadow-slate-700 text-blue-950"
+                  : "shadow-slate-400"
+              } rounded-lg`}
             >
               Awards
             </button>
             <button
               type="button"
-              className="p-3 btn bg-slate-100 shadow-lg shadow-slate-400 rounded-lg"
+              className={`p-3 btn bg-slate-100 shadow-lg rounded-lg ${
+                modeTheme === "dark"
+                  ? "shadow-slate-700 text-blue-950"
+                  : "shadow-slate-400"
+              }`}
             >
               Education
             </button>
