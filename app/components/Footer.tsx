@@ -18,19 +18,49 @@ const Footer = ({ modeTheme }: any) => {
       </div>
       <div className="flex gap-3">
         <a href="https://www.facebook.com/chriskag.kmc" target="_blank">
-          <FaFacebookF className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full hover:bg-blue-950 hover:text-white transition duration-700" />
+          <FaFacebookF
+            className={`text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full transition duration-700 ${
+              modeTheme === "dark"
+                ? "hover:bg-slate-50 hover:text-blue-950"
+                : "hover:bg-blue-950 hover:text-bg-50"
+            }`}
+          />
         </a>
         <a href="https://www.linkedin.com/in/kaghenimbale/" target="_blank">
-          <FaLinkedinIn className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full hover:bg-blue-950 hover:text-white transition duration-700" />
+          <FaLinkedinIn
+            className={`text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full ${
+              modeTheme === "dark"
+                ? "hover:bg-slate-50 hover:text-blue-950"
+                : "hover:bg-blue-950 hover:text-bg-50"
+            } transition duration-700`}
+          />
         </a>
         <a href="https://twitter.com/MbaleKagheni" target="_blank">
-          <FaTwitter className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full hover:bg-blue-950 hover:text-white transition duration-700" />
+          <FaTwitter
+            className={`text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full ${
+              modeTheme === "dark"
+                ? "hover:bg-slate-50 hover:text-blue-950"
+                : "hover:bg-blue-950 hover:text-bg-50"
+            } transition duration-700`}
+          />
         </a>
         <a href="https://github.com/Kaghenimbale" target="_blank">
-          <FaGithub className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full hover:bg-blue-950 hover:text-white transition duration-700" />
+          <FaGithub
+            className={`text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full ${
+              modeTheme === "dark"
+                ? "hover:bg-slate-50 hover:text-blue-950"
+                : "hover:bg-blue-950 hover:text-bg-50"
+            } transition duration-700`}
+          />
         </a>
         <a href="https://www.instagram.com/kagheni_chris/" target="_blank">
-          <FaInstagram className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full hover:bg-blue-950 hover:text-white transition duration-700" />
+          <FaInstagram
+            className={`text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full ${
+              modeTheme === "dark"
+                ? "hover:bg-slate-50 hover:text-blue-950"
+                : "hover:bg-blue-950 hover:text-bg-50"
+            } transition duration-700`}
+          />
         </a>
       </div>
       <div>
