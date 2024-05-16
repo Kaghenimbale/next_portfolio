@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
 import chris from "../../public/chris.jpg";
@@ -7,18 +10,27 @@ const AboutMe = ({ modeTheme }: any) => {
   return (
     <>
       <div
+        data-aos="fade-up"
         id="home"
         className={`w-screen ${
           modeTheme === "light" ? "" : "bg-slate-800 text-white"
         } h-[100vh] p-6 grid grid-cols-1 items-center pt-20 md:pt-0 md:gap-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 md:grid-cols-2`}
       >
-        <div className="flex flex-col md:gap-4 order-2 md:order-none">
+        <div
+          data-aos="fade-right"
+          className="flex flex-col md:gap-4 order-2 md:order-none"
+        >
           <div className="flex flex-col gap-2">
             <div className="grid md:gap-3">
-              <h1 className="text-3xl text-center md:text-left font-extrabold md:text-4xl lg:text-5xl md:whitespace-nowrap">
+              <motion.h1
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="text-3xl text-center md:text-left font-extrabold md:text-4xl lg:text-5xl md:whitespace-nowrap"
+              >
                 Hi I&apos;m KAGHENI
                 <span className="text-rose-600"> Chris,</span>
-              </h1>
+              </motion.h1>
               <h2 className="font-bold text-center text-xl md:text-left md:text-3xl lg:text-4xl">
                 Front-End Developer
               </h2>
@@ -52,7 +64,10 @@ const AboutMe = ({ modeTheme }: any) => {
             </a>
           </div>
         </div>
-        <div className="flex justify-center md:justify-end">
+        <div
+          data-aos="fade-left"
+          className="flex justify-center md:justify-end"
+        >
           <div className="flex items-center w-60 h-60 sm:w-72 sm:h-72 lg:w-96 lg:h-96 justify-center rounded-full border-slate-200 shadow-xl">
             <Image
               alt="./chris.png"

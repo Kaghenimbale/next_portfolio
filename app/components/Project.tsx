@@ -138,12 +138,12 @@ const Project = ({ modeTheme }: any) => {
             return (
               <div
                 key={project.id}
+                data-aos={project.id % 2 === 0 ? "fade-left" : "fade-right"}
                 className={`bg-slate-200 p-4 rounded-lg shadow-lg grid gap-4 w-fit sm:grid-cols-2 ${
                   modeTheme === "dark"
                     ? "text-black shadow-slate-700"
                     : "shadow-slate-400"
                 }`}
-                data-aos="fade-up"
               >
                 <div className="flex flex-col gap-4 w-[18rem] sm:w-[15rem] xl:w-[13rem] 2xl:w-[15rem]">
                   <p className="p-1 shadow-inner shadow-slate-400 w-fit rounded-md">

@@ -13,10 +13,13 @@ const Experience = ({ modeTheme }: any) => {
         About Chris
       </h2>
       <div id="about" className="grid gap-10 grid-cols-1 md:grid-cols-2">
-        <div className="flex items-center justify-center lg:justify-start">
+        <div
+          data-aos="fade-right"
+          className="flex items-center justify-center lg:justify-start"
+        >
           <div className="w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-rose-600"></div>
         </div>
-        <div className="flex flex-col gap-5">
+        <div data-aos="fade-left" className="flex flex-col gap-5">
           <p className="text-xl sm:text-5xl font-bold">
             2 Year&apos;s Experience on Product
             <span className="text-rose-600"> Design</span>.
