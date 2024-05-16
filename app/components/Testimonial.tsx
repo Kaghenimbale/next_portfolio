@@ -19,6 +19,7 @@ const Testimonial = ({ modeTheme }: any) => {
       <h2 className="font-bold sm:text-5xl">What&apos;s Our Customer Say</h2>
       <div className="grid grid-cols-1 justify-items-center gap-4 lg:grid-cols-2">
         <div
+          data-aos="fade-right"
           className={`flex flex-col gap-5 bg-slate-100 rounded-lg p-4 sm:w-[25rem] shadow-xl  ${
             modeTheme === "dark" ? "shadow-slate-700" : "shadow-slate-400"
           } justify-between`}
@@ -57,6 +58,7 @@ const Testimonial = ({ modeTheme }: any) => {
         </div>
 
         <div
+          data-aos="fade-left"
           className={`flex flex-col gap-5 bg-slate-100 rounded-lg p-4 sm:w-[25rem] shadow-xl   ${
             modeTheme === "dark" ? "shadow-slate-700" : "shadow-slate-400"
           } justify-between`}

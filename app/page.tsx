@@ -10,10 +10,20 @@ import Testimonial from "./components/Testimonial";
 import Touch from "./components/Touch";
 import { FaMoon } from "react-icons/fa";
 import { BsSunFill } from "react-icons/bs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 export default function Home() {
   const [mode, setMode] = useState("light");
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   return (
     <>
       <div className="flex fixed z-10 gap-4 rounded-full bg-white p-1 top-20 left-2 shadow-inner shadow-blue-950">
