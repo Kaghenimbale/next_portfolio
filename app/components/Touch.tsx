@@ -4,6 +4,7 @@ import { TiPlus } from "react-icons/ti";
 const Touch = ({ modeTheme }: any) => {
   return (
     <div
+      data-aos="zoom-in"
       className={`px-3     ${
         modeTheme === "light" ? "" : "bg-slate-800 text-white"
       } py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80`}

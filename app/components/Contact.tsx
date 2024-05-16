@@ -17,6 +17,7 @@ const Contact = ({ modeTheme }: any) => {
         <div className="flex flex-col gap-5 md:w-[30rem] md:p-5 justify-between">
           <p className="font-bold text-2xl sm:text-5xl">Get In Touch With Me</p>{" "}
           <form
+            data-aos="zoom-in-right"
             className={`flex flex-col gap-4 p-6 bg-slate-100 rounded-xl shadow-2xl ${
               modeTheme === "dark" ? "shadow-slate-700" : "shadow-slate-400"
             }`}
@@ -71,7 +72,10 @@ const Contact = ({ modeTheme }: any) => {
             </button>
           </form>
         </div>
-        <div className="md:w-[30rem] p-5 flex gap-2 flex-col justify-between">
+        <div
+          data-aos="zoom-in-left"
+          className="md:w-[30rem] p-5 flex gap-2 flex-col justify-between"
+        >
           <h2 className="font-bold text-2xl">Let's talk about it</h2>
           <p>
             Question, comment or concern? the contact form is the best way to
