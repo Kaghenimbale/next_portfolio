@@ -20,7 +20,7 @@ const Project = ({ modeTheme }: any) => {
       id: 1,
       title: "BookStore",
       technologies: ["React", "CSS", "CRA"],
-      type: "Web Application",
+      type: "React",
       image: bookstore,
       description:
         'The Bookstore is a website similar to the "Awesome Books" website. It will allows you to display a list of books, add a book and Remove a selected book.',
@@ -34,7 +34,7 @@ const Project = ({ modeTheme }: any) => {
       image: jstodo,
       description:
         "To-do list is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!",
-      type: "Web Application",
+      type: "vanillajs",
       source: "https://github.com/Kaghenimbale/To-Do-List-app.git",
       liveDemo: "https://aesthetic-sunburst-db7cb6.netlify.app/",
     },
@@ -45,7 +45,7 @@ const Project = ({ modeTheme }: any) => {
       image: reacttodo,
       description:
         "To-do-List is a website that will help you to set up a list a task that you want to accomplish.",
-      type: "Web Application",
+      type: "React",
       source: "https://github.com/Kaghenimbale/Todo-list-App.git",
       liveDemo: "https://gleeful-brigadeiros-299542.netlify.app/",
     },
@@ -56,7 +56,7 @@ const Project = ({ modeTheme }: any) => {
       image: festival,
       description:
         "Festival_Amani_Website is a project that will allow people to what the festival amani provide in Goma town and the date of the next session of the Amani festival.",
-      type: "Web Application",
+      type: "vanillajs",
       source: "https://github.com/Kaghenimbale/Capstone-project.git",
       liveDemo: "https://kaghenimbale.github.io/Capstone-project/",
     },
@@ -67,7 +67,7 @@ const Project = ({ modeTheme }: any) => {
       image: jsportfolio,
       description:
         "A Portfolio website is a project that can be used to show your achievement to people and allow them to contact you once they are interested in some of your achievements.",
-      type: "Web Application",
+      type: "Vanillajs",
       source: "https://github.com/Kaghenimbale/my-portfolio.git",
       liveDemo: "https://kaghenimbale.github.io/my-portfolio/",
     },
@@ -78,7 +78,7 @@ const Project = ({ modeTheme }: any) => {
       image: livescore,
       description:
         "Football Live score is an application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.",
-      type: "Web Application",
+      type: "React",
       source: "https://github.com/Kaghenimbale/metrics-webapp.git",
       liveDemo: "https://mylivescorefoot.netlify.app/",
     },

@@ -22,7 +22,7 @@ export default function Home() {
       duration: 1000,
       once: false,
     });
-  }, []);
+  }, [mode]);
 
   return (
     <>
