@@ -58,7 +58,6 @@ const Skills = ({ modeTheme }: any) => {
           return (
             <div
               key={card.id}
-              data-aos={card.id % 2 === 0 ? "zoom-in-up" : "zoom-in-down"}
               className={`bg-slate-50 flex flex-col gap-6 w-[16rem] ${
                 more !== card.id || more === null
                   ? "h-[20rem] transition-height duration-800"
