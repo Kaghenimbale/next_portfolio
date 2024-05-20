@@ -12,9 +12,9 @@ const AboutMe = ({ modeTheme }: any) => {
       <div
         data-aos="fade-up"
         id="home"
-        className={`w-screen ${
+        className={`w-screen  h-[100vh] p-6 grid grid-cols-1 items-center pt-20 md:pt-0 md:gap-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 md:grid-cols-2 ${
           modeTheme === "light" ? "" : "bg-slate-800 text-white"
-        } h-[100vh] p-6 grid grid-cols-1 items-center pt-20 md:pt-0 md:gap-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 md:grid-cols-2`}
+        }`}
       >
         <div
           data-aos="fade-right"
