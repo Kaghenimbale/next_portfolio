@@ -4,12 +4,14 @@ import { TiPlus } from "react-icons/ti";
 const Touch = ({ modeTheme }: any) => {
   return (
     <div
-      data-aos="zoom-in"
       className={`px-3     ${
         modeTheme === "light" ? "" : "bg-slate-800 text-white"
       } py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80`}
     >
-      <div className="flex flex-col gap-8 bg-slate-100 p-3 shadow-md shadow-slate-400">
+      <div
+        data-aos="zoom-in"
+        className="flex flex-col gap-8 bg-slate-100 p-3 shadow-md shadow-slate-400"
+      >
         <p className="text-rose-600 font-bold text-2xl text-center">
           Get It Touch
         </p>
