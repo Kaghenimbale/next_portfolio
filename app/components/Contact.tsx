@@ -65,7 +65,7 @@ const Contact = ({ modeTheme }: any) => {
 
             <button
               type="submit"
-              className="btn bg-rose-600 hover:text-blue-950 hover:bg-gray-50 transition duration-700 text-white shadow-xl shadow-slate-300 rounded-lg w-fit p-3 flex items-center gap-2 font-bold"
+              className="btn bg-rose-600 hover:text-blue-950 hover:bg-gray-50 transition text-white shadow-xl shadow-slate-300 rounded-lg w-fit p-3 flex items-center gap-2 font-bold hover:-translate-y-2 duration-700"
             >
               Submit Now
               <TiPlus />
