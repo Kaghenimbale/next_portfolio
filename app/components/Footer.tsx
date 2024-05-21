@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
@@ -36,7 +36,7 @@ const Footer = ({ modeTheme }: any) => {
           />
         </a>
         <a href="https://twitter.com/MbaleKagheni" target="_blank">
-          <FaTwitter
+          <FaXTwitter
             className={`text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full ${
               modeTheme === "dark"
                 ? "hover:bg-slate-50 hover:text-blue-950"
