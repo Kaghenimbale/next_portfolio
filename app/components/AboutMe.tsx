@@ -48,12 +48,12 @@ const AboutMe = ({ modeTheme }: any) => {
           </div>
 
           <div className="flex justify-center gap-2 md:justify-start">
-            <button
-              type="button"
-              className="btn bg-rose-600 transition hover:-translate-y-2 duration-700 text-white p-3 w-40 rounded-lg shadow-xl "
+            <a
+              href="#contact"
+              className="btn bg-rose-600 transition hover:-translate-y-2 duration-700 text-white p-3 w-40 rounded-lg shadow-xl flex justify-center"
             >
               Hire Me
-            </button>
+            </a>
             <a
               href="https://docs.google.com/document/d/16AFIBCZNeGRrFIlPfVNeKlcUZlyj3YGPa5n4z3HLVBI/edit?usp=sharing"
               target="_blank"
