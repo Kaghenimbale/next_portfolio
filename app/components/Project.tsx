@@ -162,7 +162,7 @@ const Project = ({ modeTheme }: any) => {
                 data-aos={project.id % 2 === 0 ? "fade-left" : "fade-right"}
                 className={`bg-slate-200 p-4 rounded-lg shadow-lg grid gap-4 w-fit sm:grid-cols-2 ${
                   modeTheme === "dark"
-                    ? "text-black shadow-slate-700"
+                    ? "text-blue-950 shadow-slate-700"
                     : "shadow-slate-400"
                 }`}
               >
