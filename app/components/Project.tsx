@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React, { Fragment, useState } from "react";
 import { TiPlus } from "react-icons/ti";
-import projectimg from "../../public/Screenshot from 2023-04-29 13-13-05.png";
 import bookstore from "../../public/Screenshot from 2024-04-11 13-22-17.png";
 import jstodo from "../../public/Screenshot from 2024-04-11 13-25-11.png";
 import reacttodo from "../../public/Screenshot from 2024-04-11 13-23-49.png";
@@ -15,12 +14,13 @@ import Modal from "./Modal";
 const Project = ({ modeTheme }: any) => {
   const [showModal, setShowModal] = useState(false);
   const [dataObject, setData] = useState({});
+  const [projectFilter, setProjectFilter] = useState("all");
   const projects = [
     {
       id: 1,
       title: "BookStore",
       technologies: ["React", "CSS", "CRA"],
-      type: "React",
+      type: "React Js",
       image: bookstore,
       description:
         'The Bookstore is a website similar to the "Awesome Books" website. It will allows you to display a list of books, add a book and Remove a selected book.',
@@ -34,7 +34,7 @@ const Project = ({ modeTheme }: any) => {
       image: jstodo,
       description:
         "To-do list is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!",
-      type: "vanillajs",
+      type: "Vanilla Js",
       source: "https://github.com/Kaghenimbale/To-Do-List-app.git",
       liveDemo: "https://aesthetic-sunburst-db7cb6.netlify.app/",
     },
@@ -45,7 +45,7 @@ const Project = ({ modeTheme }: any) => {
       image: reacttodo,
       description:
         "To-do-List is a website that will help you to set up a list a task that you want to accomplish.",
-      type: "React",
+      type: "React Js",
       source: "https://github.com/Kaghenimbale/Todo-list-App.git",
       liveDemo: "https://gleeful-brigadeiros-299542.netlify.app/",
     },
@@ -56,7 +56,7 @@ const Project = ({ modeTheme }: any) => {
       image: festival,
       description:
         "Festival_Amani_Website is a project that will allow people to what the festival amani provide in Goma town and the date of the next session of the Amani festival.",
-      type: "vanillajs",
+      type: "Vanilla Js",
       source: "https://github.com/Kaghenimbale/Capstone-project.git",
       liveDemo: "https://kaghenimbale.github.io/Capstone-project/",
     },
@@ -67,7 +67,7 @@ const Project = ({ modeTheme }: any) => {
       image: jsportfolio,
       description:
         "A Portfolio website is a project that can be used to show your achievement to people and allow them to contact you once they are interested in some of your achievements.",
-      type: "Vanillajs",
+      type: "Vanilla Js",
       source: "https://github.com/Kaghenimbale/my-portfolio.git",
       liveDemo: "https://kaghenimbale.github.io/my-portfolio/",
     },
@@ -78,7 +78,7 @@ const Project = ({ modeTheme }: any) => {
       image: livescore,
       description:
         "Football Live score is an application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.",
-      type: "React",
+      type: "React Js",
       source: "https://github.com/Kaghenimbale/metrics-webapp.git",
       liveDemo: "https://mylivescorefoot.netlify.app/",
     },
@@ -90,9 +90,11 @@ const Project = ({ modeTheme }: any) => {
     setData({ ...project });
 
     document.body.style.overflowY = "hidden";
-
-    console.log(document.body.style.overflowY);
   };
+  const projectDisplay =
+    projectFilter !== "all"
+      ? projects.filter((project) => project.type === projectFilter)
+      : projects;
   return (
     <Fragment>
       <div
@@ -113,6 +115,7 @@ const Project = ({ modeTheme }: any) => {
           >
             <button
               type="button"
+              onClick={() => setProjectFilter("all")}
               className={`btn bg-slate-50 p-4 shadow-xl rounded-lg ${
                 modeTheme === "dark"
                   ? "shadow-slate-700 text-blue-950"
@@ -121,20 +124,32 @@ const Project = ({ modeTheme }: any) => {
             >
               All Works
             </button>
-            <button type="button" className="btn bg-slate-200 p-4">
-              Web Development
+            <button
+              type="button"
+              onClick={() => setProjectFilter("React Js")}
+              className="btn bg-slate-200 p-4"
+            >
+              React Js
             </button>
-            <button type="button" className="btn bg-slate-200 p-4">
-              UI/UX Design
+            <button
+              type="button"
+              onClick={() => setProjectFilter("Vanilla Js")}
+              className="btn bg-slate-200 p-4"
+            >
+              Vanilla Js
             </button>
-            <button type="button" className="btn bg-slate-200 p-4">
-              Branding Design
+            <button
+              type="button"
+              // onClick={() => setProjectFilter("rails")}
+              className="btn bg-slate-200 p-4"
+            >
+              Ruby on Rails
             </button>
           </div>
         </div>
 
         <div className="grid gap-5 xl:grid-cols-2 xl:gap-10">
-          {projects.map((project) => {
+          {projectDisplay.map((project) => {
             return (
               <div
                 key={project.id}
