@@ -22,7 +22,7 @@ const Footer = ({ modeTheme }: any) => {
             className={`text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full transition duration-700 ${
               modeTheme === "dark"
                 ? "hover:bg-slate-50 hover:text-blue-950"
-                : "hover:bg-blue-950 hover:text-bg-50"
+                : "hover:bg-blue-950 hover:text-white"
             }`}
           />
         </a>
@@ -31,7 +31,7 @@ const Footer = ({ modeTheme }: any) => {
             className={`text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full ${
               modeTheme === "dark"
                 ? "hover:bg-slate-50 hover:text-blue-950"
-                : "hover:bg-blue-950 hover:text-bg-50"
+                : "hover:bg-blue-950 hover:text-white"
             } transition duration-700`}
           />
         </a>
@@ -40,7 +40,7 @@ const Footer = ({ modeTheme }: any) => {
             className={`text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full ${
               modeTheme === "dark"
                 ? "hover:bg-slate-50 hover:text-blue-950"
-                : "hover:bg-blue-950 hover:text-bg-50"
+                : "hover:bg-blue-950 hover:text-white"
             } transition duration-700`}
           />
         </a>
@@ -49,7 +49,7 @@ const Footer = ({ modeTheme }: any) => {
             className={`text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full ${
               modeTheme === "dark"
                 ? "hover:bg-slate-50 hover:text-blue-950"
-                : "hover:bg-blue-950 hover:text-bg-50"
+                : "hover:bg-blue-950 hover:text-white"
             } transition duration-700`}
           />
         </a>
@@ -58,7 +58,7 @@ const Footer = ({ modeTheme }: any) => {
             className={`text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full ${
               modeTheme === "dark"
                 ? "hover:bg-slate-50 hover:text-blue-950"
-                : "hover:bg-blue-950 hover:text-bg-50"
+                : "hover:bg-blue-950 hover:text-white"
             } transition duration-700`}
           />
         </a>

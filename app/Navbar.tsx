@@ -25,7 +25,7 @@ const Navbar = () => {
       <a href="https://wa.link/iz116d" target="_blank">
         <button className="btn flex items-center gap-2 bg-blue-950 p-3 text-white rounded-md hover:bg-gray-50 hover:text-blue-950 hover:shadow">
           Let&apos;s Chat
-          <FaWhatsapp color="white" />
+          <FaWhatsapp />
         </button>
       </a>
     </nav>

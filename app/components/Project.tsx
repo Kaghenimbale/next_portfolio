@@ -116,7 +116,9 @@ const Project = ({ modeTheme }: any) => {
             <button
               type="button"
               onClick={() => setProjectFilter("all")}
-              className={`btn bg-slate-50 p-4 shadow-xl rounded-lg ${
+              className={`btn ${
+                projectFilter === "all" ? "bg-slate-200" : "bg-slate-50"
+              } p-4 shadow-xl rounded-lg ${
                 modeTheme === "dark"
                   ? "shadow-slate-700 text-blue-950"
                   : "shadow-slate-400"
@@ -127,21 +129,25 @@ const Project = ({ modeTheme }: any) => {
             <button
               type="button"
               onClick={() => setProjectFilter("React Js")}
-              className="btn bg-slate-200 p-4"
+              className={`btn ${
+                projectFilter === "React Js" ? "bg-slate-200" : "bg-slate-50"
+              } p-4`}
             >
               React Js
             </button>
             <button
               type="button"
               onClick={() => setProjectFilter("Vanilla Js")}
-              className="btn bg-slate-200 p-4"
+              className={`btn ${
+                projectFilter === "Vanilla Js" ? "bg-slate-200" : "bg-slate-50"
+              } p-4`}
             >
               Vanilla Js
             </button>
             <button
               type="button"
               // onClick={() => setProjectFilter("rails")}
-              className="btn bg-slate-200 p-4"
+              className="btn bg-slate-50 p-4"
             >
               Ruby on Rails
             </button>
