@@ -34,13 +34,13 @@ const Modal = ({ ObjectData, onClose, modeTheme }: any) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full hover:bg-blue-700 hover:text-white transition duration-700" />
+              <FaGithub className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full bg-blue-700 text-white transition duration-700" />
             </a>
             <a
               href={ObjectData[0].liveDemo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex hover:text-blue-700 underline"
+              className="flex text-blue-700 underline"
             >
               Live Demo
             </a>
