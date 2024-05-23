@@ -40,7 +40,7 @@ const AboutMe = ({ modeTheme }: any) => {
                 modeTheme === "dark" ? " text-slate-300" : "text-slate-700"
               }`}
             >
-              From the Republic Democratic of Congo. I can help you build a
+              from the Republic Democratic of Congo. I can help you build a
               product, feature or website Look through some of my work and
               experience! If you like what you see and have a project you need
               coded, don&apos;t hesitate to contact me.
