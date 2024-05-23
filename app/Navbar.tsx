@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { AiFillMessage } from "react-icons/ai";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Navbar = () => {
   const navlinks = ["Home", "About", "Services", "Contact"];
@@ -22,10 +22,10 @@ const Navbar = () => {
           );
         })}
       </ul>
-      <a href="https://www.linkedin.com/in/kaghenimbale/" target="_blank">
+      <a href="https://wa.link/iz116d" target="_blank">
         <button className="btn flex items-center gap-2 bg-blue-950 p-3 text-white rounded-md hover:bg-gray-50 hover:text-blue-950 hover:shadow">
           Let&apos;s Chat
-          <AiFillMessage color="white" />
+          <FaWhatsapp />
         </button>
       </a>
     </nav>
