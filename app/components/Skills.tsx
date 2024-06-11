@@ -4,30 +4,38 @@ import React, { useState } from "react";
 import { TiPlus } from "react-icons/ti";
 import { TiMinus } from "react-icons/ti";
 import { BiNetworkChart } from "react-icons/bi";
+import { TbNetwork } from "react-icons/tb";
+import { SlScreenDesktop } from "react-icons/sl";
+import { TbSunElectricity } from "react-icons/tb";
+import { RiCodeSSlashFill } from "react-icons/ri";
 
 const Skills = ({ modeTheme }: any) => {
   const [more, setMore] = useState(null);
   const cards = [
     {
       id: 1,
+      icon: SlScreenDesktop,
       title: "App Development",
       description:
         "I am really passionate about working on web application since I have done my training at Microverse an online school of global developer where I have work on many project with developer from all over the world.",
     },
     {
       id: 2,
+      icon: RiCodeSSlashFill,
       title: "Web Development",
       description:
         "I like working on website since I have done my training at Microverse an online school of global developer where I have work on many project with developer from all over the world. I have learn to work with frameworks like React on the front end, Ruby on Rails on the backend",
     },
     {
       id: 3,
+      icon: TbNetwork,
       title: "Networking",
       description:
         "I finish my studies in network and telecommunication in 2021, and I was really happy about my achievment and help me to grow my computer science skills and learn that we can develop our capacity in computer science throught research on the internet.",
     },
     {
       id: 4,
+      icon: TbSunElectricity,
       title: "Electricity",
       description:
         "My studies in electricity was really interesting because that when I first like to working with my hand and learn to like technologies.",
@@ -55,10 +63,11 @@ const Skills = ({ modeTheme }: any) => {
 
       <div className="grid gap-5 justify-between justify-items-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
         {cards.map((card) => {
+          const Icon = card.icon;
           return (
             <div
               key={card.id}
-              className={`bg-slate-50 flex flex-col gap-6 w-[16rem] ${
+              className={`bg-slate-100 flex flex-col gap-6 w-[18rem] ${
                 more !== card.id || more === null
                   ? "h-[20rem] transition-height duration-800"
                   : "h-auto transition-height duration-700"
@@ -68,8 +77,8 @@ const Skills = ({ modeTheme }: any) => {
                   : "shadow-slate-400"
               }`}
             >
-              <div className="bg-slate-100 shadow-inner shadow-slate-300 w-fit p-3 rounded-lg">
-                <BiNetworkChart className="text-4xl text-slate-400" />
+              <div className="w-fit p-3 rounded-lg">
+                <Icon className="text-4xl text-rose-600" />
               </div>
               <h3 className="font-bold text-xl">{card.title}</h3>
               <p
