@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { TiPlus } from "react-icons/ti";
 import { BiMessageDetail } from "react-icons/bi";
 import { FaCheck } from "react-icons/fa";
+import Image from "next/image";
+import chris from "../../public/chris.jpg";
 
 const Contact = ({ modeTheme }: any) => {
   const [formData, setFormData] = useState({
@@ -71,6 +73,7 @@ const Contact = ({ modeTheme }: any) => {
                   type="text"
                   name="FirstName"
                   value={formData.FirstName}
+                  onChange={handleChange}
                   className="g p-2 border-2 border-slate-200 w-full"
                   placeholder="First Name"
                 />
@@ -148,14 +151,20 @@ const Contact = ({ modeTheme }: any) => {
             get in touch with me.
           </p>
           <div
-            className={`flex flex-col gap-4 p-6 bg-slate-100 rounded-xl shadow-2xl shadow-slate-300  ${
+            className={`flex flex-col gap-4 p-6 items-center rounded-xl shadow-2xl shadow-slate-300 bg-slate-100  ${
               modeTheme === "dark" ? "shadow-slate-700" : "shadow-slate-400"
             }`}
           >
-            <div className="w-fit h-[21rem]">
-              <div className="bg-rose-600"></div>
+            <div className="w-fit h-[24rem]">
+              <div className="w-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 flex items-center">
+                <Image
+                  alt="./chris.png"
+                  className="h-full w-full object-cover"
+                  src={chris}
+                />
+              </div>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 w-[100%]">
               <BiMessageDetail
                 className={`text-6xl font-thin ${
                   modeTheme === "dark" ? "text-blue-950" : ""

@@ -549,6 +549,14 @@ video {
 .order-2 {
   order: 2;
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .flex {
   display: flex;
 }
@@ -576,8 +584,8 @@ video {
 .h-\[20rem\] {
   height: 20rem;
 }
-.h-\[21rem\] {
-  height: 21rem;
+.h-\[24rem\] {
+  height: 24rem;
 }
 .h-\[40px\] {
   height: 40px;
@@ -602,6 +610,9 @@ video {
 }
 .w-72 {
   width: 18rem;
+}
+.w-\[100\%\] {
+  width: 100%;
 }
 .w-\[18rem\] {
   width: 18rem;
@@ -1070,8 +1081,14 @@ body {
   overflow: hidden;
 }
 
-button {
+button,
+a {
   cursor: pointer;
+}
+
+input,
+textarea {
+  outline: none;
 }
 
 .hover\:-translate-y-2:hover {
