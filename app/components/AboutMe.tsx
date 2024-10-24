@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
-import chris from "../../public/chris.jpg";
+import chris from "../../public/chris_true.jpg";
 import { RiDownload2Fill } from "react-icons/ri";
 
 const AboutMe = ({ modeTheme }: any) => {
