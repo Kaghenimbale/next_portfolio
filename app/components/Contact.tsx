@@ -1,11 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import { TiPlus } from "react-icons/ti";
 import { BiMessageDetail } from "react-icons/bi";
+import { FaCheck } from "react-icons/fa";
+import Image from "next/image";
+import chris from "../../public/chris.jpg";
 
 const Contact = ({ modeTheme }: any) => {
+  const [formData, setFormData] = useState({
+    FirstName: "",
+    LastName: "",
+    Email: "",
+    Subject: "",
+    Message: "",
+  });
+
+  const [status, setStatus] = useState("");
+  const [response, setResponse] = useState<null | boolean>(null);
+  const handleChange = (e: any) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    const res = await fetch("https://formspree.io/f/xanwzdjz", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    setResponse(res.ok);
+
+    if (res.ok) {
+      setStatus("Form submitted successfully!");
+      setFormData({
+        FirstName: "",
+        LastName: "",
+        Email: "",
+        Subject: "",
+        Message: "",
+      });
+    } else {
+      setStatus("There was an error submitting the form.");
+    }
+  };
+
   return (
     <div
       id="contact"
+      onSubmit={handleSubmit}
       className={`px-6 ${
         modeTheme === "light" ? "bg-slate-50" : "bg-slate-800 text-slate-300"
       } py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-4`}
@@ -26,6 +71,9 @@ const Contact = ({ modeTheme }: any) => {
               <label>
                 <input
                   type="text"
+                  name="FirstName"
+                  value={formData.FirstName}
+                  onChange={handleChange}
                   className="g p-2 border-2 border-slate-200 w-full"
                   placeholder="First Name"
                 />
@@ -34,6 +82,9 @@ const Contact = ({ modeTheme }: any) => {
               <label>
                 <input
                   type="text"
+                  name="LastName"
+                  value={formData.LastName}
+                  onChange={handleChange}
                   className="g p-2 border-2 border-slate-200 w-full"
                   placeholder="Last Name"
                 />
@@ -43,6 +94,9 @@ const Contact = ({ modeTheme }: any) => {
             <label>
               <input
                 type="email"
+                value={formData.Email}
+                onChange={handleChange}
+                name="Email"
                 className="g p-2 border-2 border-slate-200 w-full"
                 placeholder="Email"
               />
@@ -51,6 +105,9 @@ const Contact = ({ modeTheme }: any) => {
             <label>
               <input
                 type="text"
+                value={formData.Subject}
+                onChange={handleChange}
+                name="Subject"
                 className="g p-2 border-2 border-slate-200 w-full"
                 placeholder="Subject"
               />
@@ -59,6 +116,9 @@ const Contact = ({ modeTheme }: any) => {
             <label>
               <textarea
                 className="p-2 border-2 border-slate-200 w-full"
+                name="Message"
+                value={formData.Message}
+                onChange={handleChange}
                 placeholder="Message Me"
               ></textarea>
             </label>
@@ -71,6 +131,15 @@ const Contact = ({ modeTheme }: any) => {
               <TiPlus />
             </button>
           </form>
+          <p
+            data-aos="zoom-in-right"
+            className={`${
+              response ? "text-lime-500 flex gap-2" : "text-red-600"
+            }`}
+          >
+            {status}
+            {response ? <FaCheck /> : ""}
+          </p>
         </div>
         <div
           data-aos="zoom-in-left"
@@ -82,14 +151,20 @@ const Contact = ({ modeTheme }: any) => {
             get in touch with me.
           </p>
           <div
-            className={`flex flex-col gap-4 p-6 bg-slate-100 rounded-xl shadow-2xl shadow-slate-300  ${
+            className={`flex flex-col gap-4 p-6 items-center rounded-xl shadow-2xl shadow-slate-300 bg-slate-100  ${
               modeTheme === "dark" ? "shadow-slate-700" : "shadow-slate-400"
             }`}
           >
-            <div className="w-fit h-[21rem]">
-              <div className="bg-rose-600"></div>
+            <div className="w-fit h-[24rem]">
+              <div className="w-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 flex items-center">
+                <Image
+                  alt="./chris.png"
+                  className="h-full w-full object-cover"
+                  src={chris}
+                />
+              </div>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 w-[100%]">
               <BiMessageDetail
                 className={`text-6xl font-thin ${
                   modeTheme === "dark" ? "text-blue-950" : ""

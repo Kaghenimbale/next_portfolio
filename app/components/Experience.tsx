@@ -1,6 +1,8 @@
 import React from "react";
 import { RiDownload2Fill } from "react-icons/ri";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import chris from "../../public/chris.jpg";
+import Image from "next/image";
 
 const Experience = ({ modeTheme }: any) => {
   return (
@@ -9,7 +11,7 @@ const Experience = ({ modeTheme }: any) => {
         modeTheme === "light" ? "" : "bg-slate-800 text-slate-300"
       } py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex flex-col gap-4`}
     >
-      <h2 className="font-semibold text-2xl text-center text-rose-600">
+      <h2 className="font-bold text-2xl text-center text-rose-600">
         About Chris
       </h2>
       <div id="about" className="grid gap-10 grid-cols-1 md:grid-cols-2">
@@ -17,7 +19,13 @@ const Experience = ({ modeTheme }: any) => {
           data-aos="fade-right"
           className="flex items-center justify-center lg:justify-start"
         >
-          <div className="w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-rose-600"></div>
+          <div className="w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-rose-600">
+            <Image
+              alt="./chris.png"
+              className="h-full w-full object-cover"
+              src={chris}
+            />
+          </div>
         </div>
         <div data-aos="fade-left" className="flex flex-col gap-5">
           <p className="text-xl sm:text-5xl font-bold">
@@ -105,23 +113,33 @@ const Experience = ({ modeTheme }: any) => {
                     <div className="flex gap-3 flex-wrap">
                       <div className="flex gap-2 items-center">
                         <IoMdCheckmarkCircleOutline className="text-rose-600" />
-                        <span className="underline">React Js</span>
+                        <a href="" className="underline">
+                          React Js
+                        </a>
                       </div>
                       <div className="flex gap-2 items-center">
                         <IoMdCheckmarkCircleOutline className="text-rose-600" />
-                        <span className="underline">Next Js</span>
+                        <a href="" className="underline">
+                          Next Js
+                        </a>
                       </div>
                       <div className="flex gap-2 items-center">
                         <IoMdCheckmarkCircleOutline className="text-rose-600" />
-                        <span className="underline">Javascript</span>
+                        <a href="" className="underline">
+                          Javascript
+                        </a>
                       </div>
                       <div className="flex gap-2 items-center">
                         <IoMdCheckmarkCircleOutline className="text-rose-600" />
-                        <span className="underline">Tailwind</span>
+                        <a href="" className="underline">
+                          Tailwind
+                        </a>
                       </div>
                       <div className="flex gap-2 items-center">
                         <IoMdCheckmarkCircleOutline className="text-rose-600" />
-                        <span className="underline">Ruby on Rails</span>
+                        <a href="" className="underline">
+                          Ruby on Rails
+                        </a>
                       </div>
                     </div>
                   </div>
