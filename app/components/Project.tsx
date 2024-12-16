@@ -98,7 +98,7 @@ const Project = ({ modeTheme }: any) => {
   return (
     <Fragment>
       <div
-        id="services"
+        id="projects"
         className={`px-3  ${
           modeTheme === "light" ? "" : "bg-slate-800 text-slate-300"
         } py-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 flex items-center flex-col gap-8`}

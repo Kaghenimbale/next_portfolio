@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
-import chris from "../../public/chris.jpg";
+import chris from "../../public/Christiant Kagheni.png";
 import { RiDownload2Fill } from "react-icons/ri";
 
 const AboutMe = ({ modeTheme }: any) => {
@@ -12,7 +12,7 @@ const AboutMe = ({ modeTheme }: any) => {
       <div
         data-aos="fade-up"
         id="home"
-        className={`w-screen  h-[100vh] p-6 grid grid-cols-1 items-center pt-20 md:pt-0 md:gap-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 md:grid-cols-2 ${
+        className={`w-screen  h-[100vh] p-6 grid grid-cols-1 my-0 mx-auto items-center pt-20 md:pt-0 md:gap-10 sm:px-2 md:px-20 xl:px-40 2xl:px-80 md:grid-cols-2 ${
           modeTheme === "light" ? "" : "bg-slate-800 text-white"
         }`}
       >
@@ -71,7 +71,7 @@ const AboutMe = ({ modeTheme }: any) => {
           <div className="flex items-center w-60 h-60 sm:w-72 sm:h-72 lg:w-96 lg:h-96 justify-center rounded-full border-slate-200 shadow-xl">
             <Image
               alt="./chris.png"
-              className="h-full w-full rounded-full object-cover"
+              className="h-full w-full rounded-full object-contain"
               src={chris}
             />
           </div>
