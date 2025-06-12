@@ -86,7 +86,7 @@ const Project = ({ modeTheme }: any) => {
     {
       id: 7,
       title: "Electrica",
-      technologies: ["Next Js", "CSS", "Redux"],
+      technologies: ["Next", "CSS", "Redux"],
       image: electrica,
       description:
         "Electrica is a company specializing in electrical installations, technical maintenance, and network setup. We also supply quality electrical and networking materials for homes, offices, and businesses.",
