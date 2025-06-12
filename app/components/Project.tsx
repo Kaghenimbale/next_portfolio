@@ -84,9 +84,9 @@ const Project = ({ modeTheme }: any) => {
       liveDemo: "https://mylivescorefoot.netlify.app/",
     },
     {
-      id: 6,
+      id: 7,
       title: "Electrica",
-      technologies: ["React", "CSS", "Redux"],
+      technologies: ["Next Js", "CSS", "Redux"],
       image: electrica,
       description:
         "Electrica is a company specializing in electrical installations, technical maintenance, and network setup. We also supply quality electrical and networking materials for homes, offices, and businesses.",
