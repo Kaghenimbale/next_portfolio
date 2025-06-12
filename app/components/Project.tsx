@@ -9,6 +9,7 @@ import reacttodo from "../../public/Screenshot from 2024-04-11 13-23-49.png";
 import festival from "../../public/Screenshot from 2024-04-11 13-25-25.png";
 import livescore from "../../public/Screenshot from 2024-04-11 13-26-28.png";
 import jsportfolio from "../../public/Screenshot from 2024-04-11 13-38-38.png";
+import electrica from "../../public/electrica.png";
 import Modal from "./Modal";
 
 const Project = ({ modeTheme }: any) => {
@@ -81,6 +82,17 @@ const Project = ({ modeTheme }: any) => {
       type: "React Js",
       source: "https://github.com/Kaghenimbale/metrics-webapp.git",
       liveDemo: "https://mylivescorefoot.netlify.app/",
+    },
+    {
+      id: 6,
+      title: "Electrica",
+      technologies: ["React", "CSS", "Redux"],
+      image: electrica,
+      description:
+        "Electrica is a company specializing in electrical installations, technical maintenance, and network setup. We also supply quality electrical and networking materials for homes, offices, and businesses.",
+      type: "Next Js",
+      source: "https://github.com/Kaghenimbale/Electrica",
+      liveDemo: "https://electrica-two.vercel.app/en",
     },
   ];
 
