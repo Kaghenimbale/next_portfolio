@@ -10,6 +10,7 @@ import festival from "../../public/Screenshot from 2024-04-11 13-25-25.png";
 import livescore from "../../public/Screenshot from 2024-04-11 13-26-28.png";
 import jsportfolio from "../../public/Screenshot from 2024-04-11 13-38-38.png";
 import electrica from "../../public/electrica.png";
+import ebsspa from "../../public/absspa.png";
 import Modal from "./Modal";
 
 const Project = ({ modeTheme }: any) => {
@@ -93,6 +94,17 @@ const Project = ({ modeTheme }: any) => {
       type: "Next Js",
       source: "https://github.com/Kaghenimbale/Electrica",
       liveDemo: "https://electrica-two.vercel.app/en",
+    },
+    {
+      id: 8,
+      title: "EBS Spa",
+      technologies: ["Next", "Firebase"],
+      image: ebsspa,
+      description:
+        "Elodia Beauty Spa —Development of the Elodia Beauty & Spa website, including UI/UX design, service presentation (skincare, massages, and aesthetic treatments), and integration of an online booking system, with an optimized user experience.",
+      type: "Next Js",
+      source: "https://github.com/Kaghenimbale/elodie_lum_spa.git",
+      liveDemo: "https://elodiabspa.com/",
     },
   ];
 
