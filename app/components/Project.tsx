@@ -178,14 +178,6 @@ const Project = ({ modeTheme }: any) => {
             >
               Next Js
             </button>
-
-            {/* <button
-              type="button"
-              // onClick={() => setProjectFilter("rails")}
-              className="btn bg-slate-50 p-4"
-            >
-              Ruby on Rails
-            </button> */}
           </div>
         </div>
 
