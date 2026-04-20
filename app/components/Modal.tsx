@@ -11,13 +11,12 @@ const Modal = ({ ObjectData, onClose, modeTheme }: any) => {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
-      onClick={onClose} // click outside closes
+      onClick={onClose}
     >
       <div
         className="relative w-[95vw] max-w-2xl rounded-2xl bg-white shadow-2xl p-5 md:p-6"
-        onClick={(e) => e.stopPropagation()} // 🚨 prevents closing when clicking inside
+        onClick={(e) => e.stopPropagation()}
       >
-        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-3 right-3 text-gray-500 hover:text-red-500 transition"
@@ -25,7 +24,6 @@ const Modal = ({ ObjectData, onClose, modeTheme }: any) => {
           <IoMdCloseCircle className="text-3xl" />
         </button>
 
-        {/* Image */}
         <div className="overflow-hidden rounded-xl">
           <Image
             alt={ObjectData[0].title}
@@ -34,7 +32,6 @@ const Modal = ({ ObjectData, onClose, modeTheme }: any) => {
           />
         </div>
 
-        {/* Content */}
         <div className="mt-4 space-y-3">
           <h2 className="text-xl md:text-2xl font-semibold">
             {ObjectData[0].title}
