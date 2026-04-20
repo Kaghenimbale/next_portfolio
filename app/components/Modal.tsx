@@ -33,7 +33,9 @@ const Modal = ({ ObjectData, onClose, modeTheme }: any) => {
               href={ObjectData[0].source}
               target="_blank"
               rel="noopener noreferrer"
+              className="flex gap-2 items-center"
             >
+              Github Link:
               <FaGithub className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full bg-blue-700 text-white transition duration-700" />
             </a>
             <a
