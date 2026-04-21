@@ -10,43 +10,54 @@ const Modal = ({ ObjectData, onClose, modeTheme }: any) => {
   };
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-25 z-20 backdrop-blur-lg flex justify-center items-center"
-      id="wrapper"
-      onClick={handleClick}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
+      onClick={onClose}
     >
-      <div className="flex flex-col gap-2">
+      <div
+        className="relative w-[95vw] max-w-2xl rounded-2xl bg-white shadow-2xl p-5 md:p-6"
+        onClick={(e) => e.stopPropagation()}
+      >
         <button
-          type="button"
-          className="font-bold rounded-md place-self-end"
-          onClick={() => onClose()}
+          onClick={onClose}
+          className="absolute top-3 right-3 text-gray-500 hover:text-red-500 transition"
         >
-          <IoMdCloseCircle className="text-4xl text-white hover:text-red-500 " />
+          <IoMdCloseCircle className="text-3xl" />
         </button>
-        <div className=" bg-white w-[90vw] md:w-[40rem] flex flex-col gap-2 text-black p-3">
+
+        <div className="overflow-hidden rounded-xl">
           <Image
             alt={ObjectData[0].title}
-            className="w-fit"
             src={ObjectData[0].image}
+            className="w-full object-cover rounded-xl"
           />
-          <div className="flex gap-2 items-center">
+        </div>
+
+        <div className="mt-4 space-y-3">
+          <h2 className="text-xl md:text-2xl font-semibold">
+            {ObjectData[0].title}
+          </h2>
+
+          <p className="text-gray-600">{ObjectData[0].description}</p>
+
+          <div className="flex gap-3 flex-wrap">
             <a
               href={ObjectData[0].source}
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-900 text-white hover:bg-gray-700 transition"
             >
-              <FaGithub className="text-4xl p-2 w-[40px] h-[40px] border border-gray-400 rounded-full bg-blue-700 text-white transition duration-700" />
+              <FaGithub />
+              GitHub
             </a>
+
             <a
               href={ObjectData[0].liveDemo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex text-blue-700 underline"
+              className="px-4 py-2 rounded-lg border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition"
             >
               Live Demo
             </a>
-          </div>
-          <div>
-            <p className="">{ObjectData[0].description}</p>
           </div>
         </div>
       </div>

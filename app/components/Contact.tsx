@@ -16,37 +16,53 @@ const Contact = ({ modeTheme }: any) => {
 
   const [status, setStatus] = useState("");
   const [response, setResponse] = useState<null | boolean>(null);
+
   const handleChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setStatus("Sending...");
 
-    const res = await fetch("https://formspree.io/f/xanwzdjz", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    setResponse(res.ok);
-
-    if (res.ok) {
-      setStatus("Form submitted successfully!");
-      setFormData({
-        FirstName: "",
-        LastName: "",
-        Email: "",
-        Subject: "",
-        Message: "",
+    try {
+      const res = await fetch("https://formspree.io/f/xanwzdjz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-    } else {
-      setStatus("There was an error submitting the form.");
+
+      setResponse(res.ok);
+
+      if (res.ok) {
+        setStatus("Form submitted successfully!");
+        setFormData({
+          FirstName: "",
+          LastName: "",
+          Email: "",
+          Subject: "",
+          Message: "",
+        });
+      } else {
+        setStatus("There was an error submitting the form.");
+      }
+
+      // ✅ Reset after 3 seconds
+      setTimeout(() => {
+        setResponse(null);
+        setStatus("");
+      }, 3000);
+    } catch (error) {
+      setStatus("Network error. Please try again.");
+
+      setTimeout(() => {
+        setResponse(null);
+        setStatus("");
+      }, 3000);
     }
   };
-
   return (
     <div
       id="contact"
@@ -125,13 +141,13 @@ const Contact = ({ modeTheme }: any) => {
 
             <button
               type="submit"
-              className="btn bg-rose-600 hover:text-blue-950 hover:bg-gray-50 transition text-white shadow-xl shadow-slate-300 rounded-lg w-fit p-3 flex items-center gap-2 font-bold hover:-translate-y-2 duration-700"
+              className={`btn ${response ? "bg-lime-500" : "bg-rose-600"} hover:text-blue-950 hover:bg-gray-50 transition text-white shadow-xl shadow-slate-300 rounded-lg w-fit p-3 flex items-center gap-2 font-bold hover:-translate-y-2 duration-700`}
             >
-              Submit Now
-              <TiPlus />
+              {response ? "Submitted" : "Submit Now"}
+              {response ? <FaCheck /> : <TiPlus />}
             </button>
           </form>
-          <p
+          {/* <p
             data-aos="zoom-in-right"
             className={`${
               response ? "text-lime-500 flex gap-2" : "text-red-600"
@@ -139,7 +155,7 @@ const Contact = ({ modeTheme }: any) => {
           >
             {status}
             {response ? <FaCheck /> : ""}
-          </p>
+          </p> */}
         </div>
         <div
           data-aos="zoom-in-left"
